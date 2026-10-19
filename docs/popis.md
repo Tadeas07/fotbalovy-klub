@@ -5,3 +5,6 @@ V mládežnických kategoriích fotbalového klubu FK Náchod (od mladších př
 
 Cílem této webové aplikace je vytvořit jednotný systém, který soustředí veškerou evidenci mládeže na jedno místo. Aplikace zamezí chybám při zařazování dětí do špatných věkových kategorií, zjednoduší dohledání kontaktů na zákonné zástupce v případě zranění či omluvenky a do budoucna umožní přehledné plánování tréninků a sledování výsledků zápasů.
 
+## 2. Pro koho je aplikace určená
+Systém je navržen primárně pro:
+- **Trenéry mládeže:** potřebují mít okamžitý přístup k aktuálnímu seznamu svých svěřenců, jejich věku a kontaktům na rodiče.
