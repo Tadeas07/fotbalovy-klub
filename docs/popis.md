@@ -8,3 +8,8 @@ Cílem této webové aplikace je vytvořit jednotný systém, který soustředí
 ## 2. Pro koho je aplikace určená
 Systém je navržen primárně pro:
 - **Trenéry mládeže:** potřebují mít okamžitý přístup k aktuálnímu seznamu svých svěřenců, jejich věku a kontaktům na rodiče.
+- **Vedení fotbalového klubu a šéftrenéra mládeže:** získávají celkový přehled o počtech aktivních hráčů v jednotlivých kategoriích (U11, U13, U15, U17).
+- **Zákonné zástupce (rodiče):** v další fázi projektu budou mít možnost nahlížet na rozpis tréninkových jednotek a mistrovských zápasů.
+
+## 3. Funkce aplikace
+
