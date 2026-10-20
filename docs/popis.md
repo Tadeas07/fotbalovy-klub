@@ -19,3 +19,9 @@ Systém je navržen primárně pro:
 - **Registrace nového hráče:** formulář pro přidání nového člena s přísnou kontrolou na straně serveru a zapracovanou aplikační logikou hlídající ročníky narození.
 
 ### Plánované funkce pro další etapu:
+- Evidence mistrovských a přátelských zápasů (rozdělení na odehrané a plánované, zadávání výsledků, statistiky).
+- Plánování tréninků s časem a popisem náplně.
+- Docházkový systém hráčů na tréninkových jednotkách.
+
+## 4. Použité technologie
+- **Backend:** PHP 8 s využitím PDO (připojení s prepared statements pro ochranu proti SQL Injection).
