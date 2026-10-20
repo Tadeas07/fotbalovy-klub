@@ -13,3 +13,9 @@ Systém je navržen primárně pro:
 
 ## 3. Funkce aplikace
 
+### Současný stav (k 13. listopadu):
+- **Přehled hráčů:** tabulkový výpis všech aktivních fotbalistů načítaný z relační databáze MySQL, s možností okamžitého filtrování podle věkové kategorie týmu a počítadlem zobrazených záznamů.
+- **Detail hráče:** samostatná profilová stránka hráče, kde se dynamicky dopočítává přesný věk z data narození, zobrazují se kontakty na rodiče a automaticky se vypisují jeho spoluhráči ze stejného týmu.
+- **Registrace nového hráče:** formulář pro přidání nového člena s přísnou kontrolou na straně serveru a zapracovanou aplikační logikou hlídající ročníky narození.
+
+### Plánované funkce pro další etapu:
