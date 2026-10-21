@@ -25,3 +25,6 @@ Systém je navržen primárně pro:
 
 ## 4. Použité technologie
 - **Backend:** PHP 8 s využitím PDO (připojení s prepared statements pro ochranu proti SQL Injection).
+- **Databáze:** MySQL / MariaDB (úložné jádro InnoDB, kódování UTF-8, referenční integrita pomocí cizích klíčů).
+- **Frontend:** Čisté HTML5 a vlastní CSS3 (responzivní layout bez použití externích knihoven).
+- **Prostředí a nástroje:** Lokální webový server Apache v balíku XAMPP, Visual Studio Code, Git a GitHub.
