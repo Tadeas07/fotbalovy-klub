@@ -21,3 +21,10 @@ Tento dokument shrnuje specifická pravidla a kontroly, které aplikace provád�
 - **Kde se nachází v kódu:** soubor `pridat.php`, řádky 48–56.
 
 ---
+
+## 3. Formátová kontrola kontaktních údajů
+- **Co hlídá:** Zajišťuje, aby telefonní číslo a e-mail na rodiče měly smysluplnou podobu, aby bylo možné rodiče v případě potřeby kontaktovat.
+- **Implementace:** E-mail se ověřuje vestavěnou funkcí `filter_var($email, FILTER_VALIDATE_EMAIL)` a telefon regulárním výrazem `/^[0-9+\s]{9,16}$/`.
+- **Kde se nachází v kódu:** soubor `pridat.php`, řádky 58–64.
+
+---
