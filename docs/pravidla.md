@@ -14,3 +14,10 @@ Tento dokument shrnuje specifická pravidla a kontroly, které aplikace provád�
 - **Kde se nachází v kódu:** soubor `pridat.php`, řádky 66–84.
 
 ---
+
+## 2. Validace kalendářního data narození
+- **Co hlídá:** Datum narození nesmí být v budoucnosti a musí odpovídat reálnému kalendářnímu dni.
+- **Implementace:** Využívá se objekt `DateTime::createFromFormat('Y-m-d', ...)`. Pokud zadané datum přesahuje aktuální systémový čas, záznam se neuloží.
+- **Kde se nachází v kódu:** soubor `pridat.php`, řádky 48–56.
+
+---
