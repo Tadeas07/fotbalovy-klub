@@ -28,3 +28,10 @@ Tento dokument shrnuje specifická pravidla a kontroly, které aplikace provád�
 - **Kde se nachází v kódu:** soubor `pridat.php`, řádky 58–64.
 
 ---
+
+## 4. Ochrana proti neexistujícímu záznamu a neplatným ID v URL
+- **Co hlídá:** Pokud se uživatel pokusí otevřít detail hráče přes podvržené nebo záporné ID (např. `detail.php?id=abc` nebo `detail.php?id=99999`), aplikace nesmí spadnout chybou PHP ani zobrazit prázdný rozbitý layout.
+- **Implementace:** Vstup se přetypuje na celé číslo `(int)$_GET['id']` a v případě neexistence řádku v databázi dojde k bezpečnému přesměrování zpět na `index.php`.
+- **Kde se nachází v kódu:** soubor `detail.php`, řádky 8–24.
+
+---
