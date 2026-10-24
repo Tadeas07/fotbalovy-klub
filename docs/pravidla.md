@@ -35,3 +35,13 @@ Tento dokument shrnuje specifická pravidla a kontroly, které aplikace provád�
 - **Kde se nachází v kódu:** soubor `detail.php`, řádky 8–24.
 
 ---
+
+## 5. Dynamický dopočet věku namísto statického ukládání
+- **Co hlídá:** V databázi se neukládá statický údaj "věk" v letech, protože by po roce zastaral. Ukládá se pouze přesné datum narození a věk se dynamicky počítá při každém zobrazení pomocí metody `diff()` nad objekty `DateTime`.
+- **Kde se nachází v kódu:** soubor `detail.php`, řádky 26–29.
+
+---
+
+## 6. Pravidla navržená pro navazující etapu (Zápasy)
+- **Zadání výsledku pouze u proběhlých utkání:** Skóre mistrovského utkání bude v dalším modulu povoleno zadat pouze tehdy, pokud je datum zápasu menší nebo rovno dnešnímu dni. U plánovaných zápasů bude formulář uzamčen.
+- **Automatické rozlišení výhry/prohry s ohledem na domácí prostředí:** Systém bude automaticky přiřazovat body a barvu výsledku podle toho, zda FK Náchod hrál na domácím hřišti nebo venku.
