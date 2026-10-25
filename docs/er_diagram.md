@@ -23,3 +23,20 @@ erDiagram
     }
 
     treneri {
+        int id PK
+        varchar jmeno
+        varchar prijmeni
+        varchar telefon
+        varchar email
+        enum licence
+        tinyint aktivni
+        datetime vytvoreno
+    }
+
+    tym_trener {
+        int id PK
+        int tym_id FK
+        int trener_id FK
+        enum role
+    }
+
