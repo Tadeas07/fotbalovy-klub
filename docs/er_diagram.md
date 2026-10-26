@@ -54,3 +54,22 @@ erDiagram
     }
 
     zapasy {
+        int id PK
+        int tym_id FK
+        varchar souper
+        date datum
+        time cas
+        varchar misto
+        enum typ
+        int skore_domaci
+        int skore_hoste
+        text poznamka
+        datetime vytvoreno
+    }
+
+    treninky {
+        int id PK
+        int tym_id FK
+        date datum
+        time cas_od
+        time cas_do
