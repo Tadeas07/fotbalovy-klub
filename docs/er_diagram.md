@@ -40,3 +40,17 @@ erDiagram
         enum role
     }
 
+    hraci {
+        int id PK
+        varchar jmeno
+        varchar prijmeni
+        date datum_narozeni
+        enum pozice
+        int tym_id FK
+        varchar telefon_rodice
+        varchar email_rodice
+        tinyint aktivni
+        datetime vytvoreno
+    }
+
+    zapasy {
