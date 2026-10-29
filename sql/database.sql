@@ -33,3 +33,16 @@ CREATE TABLE IF NOT EXISTS `treneri` (
 
 -- 3. Spojovací tabulka pro přiřazení trenérů k týmům (vazba M:N)
 CREATE TABLE IF NOT EXISTS `tym_trener` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `tym_id` INT NOT NULL,
+    `trener_id` INT NOT NULL,
+    `role` ENUM('hlavni', 'asistent') NOT NULL DEFAULT 'asistent',
+    FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE,
+    FOREIGN KEY (`trener_id`) REFERENCES `treneri`(`id`) ON DELETE CASCADE,
+    UNIQUE KEY `uq_tym_trener` (`tym_id`, `trener_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
+
+-- 4. Tabulka hráčů s vazbou na tým (vazba 1:N)
+CREATE TABLE IF NOT EXISTS `hraci` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `jmeno` VARCHAR(50) NOT NULL,
