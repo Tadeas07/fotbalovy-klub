@@ -81,3 +81,18 @@ CREATE TABLE IF NOT EXISTS `treninky` (
     `cas_od` TIME NOT NULL,
     `cas_do` TIME NOT NULL,
     `misto` VARCHAR(150) NOT NULL DEFAULT 'Hlavní hřiště FK Náchod',
+    `popis` TEXT DEFAULT NULL,
+    `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
+
+-- Testovací data pro kategorie
+INSERT INTO `tymy` (`id`, `nazev`, `vekova_kategorie`, `rok_narozeni_od`, `rok_narozeni_do`) VALUES
+(1, 'FK Náchod U11', 'U11', 2015, 2016),
+(2, 'FK Náchod U13', 'U13', 2013, 2014),
+(3, 'FK Náchod U15', 'U15', 2011, 2012),
+(4, 'FK Náchod U17', 'U17', 2009, 2010);
+
+-- Testovací trenéři
+INSERT INTO `treneri` (`id`, `jmeno`, `prijmeni`, `telefon`, `email`, `licence`) VALUES
+(1, 'Jan',    'Novák',    '602 111 222', 'novak@fknachod.cz',    'UEFA_B'),
