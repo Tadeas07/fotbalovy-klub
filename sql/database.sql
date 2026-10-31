@@ -105,3 +105,13 @@ INSERT INTO `tym_trener` (`tym_id`, `trener_id`, `role`) VALUES
 (1, 3, 'hlavni'),
 (2, 2, 'hlavni'),
 (2, 3, 'asistent'),
+(3, 1, 'hlavni'),
+(4, 4, 'hlavni');
+
+-- Testovací hráči pro jednotlivé kategorie
+INSERT INTO `hraci` (`jmeno`, `prijmeni`, `datum_narozeni`, `pozice`, `tym_id`, `telefon_rodice`, `email_rodice`) VALUES
+('Lukáš',  'Malý',      '2015-03-14', 'brankář',  1, '721 000 001', 'maly.rodic@seznam.cz'),
+('Adam',   'Veselý',    '2015-07-22', 'obránce',  1, '721 000 002', 'vesely.rodic@email.cz'),
+('Jakub',  'Procházka', '2016-01-10', 'záložník', 1, '721 000 003', 'prochazka.rodic@gmail.com'),
+('Filip',  'Kučera',    '2015-11-05', 'útočník',  1, '721 000 004', 'kucera.rodic@seznam.cz'),
+('Daniel', 'Horák',     '2013-05-18', 'brankář',  2, '722 000 001', 'horak.rodic@seznam.cz'),
