@@ -96,3 +96,12 @@ INSERT INTO `tymy` (`id`, `nazev`, `vekova_kategorie`, `rok_narozeni_od`, `rok_n
 -- Testovací trenéři
 INSERT INTO `treneri` (`id`, `jmeno`, `prijmeni`, `telefon`, `email`, `licence`) VALUES
 (1, 'Jan',    'Novák',    '602 111 222', 'novak@fknachod.cz',    'UEFA_B'),
+(2, 'Petr',   'Svoboda',  '603 222 333', 'svoboda@fknachod.cz',  'B'),
+(3, 'Martin', 'Dvořák',   '604 333 444', 'dvorak@fknachod.cz',   'C'),
+(4, 'Tomáš',  'Černý',    '605 444 555', 'cerny@fknachod.cz',    'B');
+
+-- Přiřazení trenérů k týmům
+INSERT INTO `tym_trener` (`tym_id`, `trener_id`, `role`) VALUES
+(1, 3, 'hlavni'),
+(2, 2, 'hlavni'),
+(2, 3, 'asistent'),
