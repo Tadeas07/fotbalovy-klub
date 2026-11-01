@@ -124,3 +124,25 @@ INSERT INTO `hraci` (`jmeno`, `prijmeni`, `datum_narozeni`, `pozice`, `tym_id`, 
 ('Martin', 'Kratochvíl','2012-03-30', 'útočník',  3, '723 000 004', 'kratochvil.rodic@seznam.cz'),
 ('Petr',   'Sedláček',  '2009-06-08', 'brankář',  4, '724 000 001', 'sedlacek.rodic@seznam.cz'),
 ('Karel',  'Vlček',     '2010-01-19', 'obránce',  4, '724 000 002', 'vlcek.rodic@email.cz'),
+('Štěpán', 'Kolář',     '2009-10-27', 'záložník', 4, '724 000 003', 'kolar.rodic@gmail.com'),
+('Matěj',  'Dostál',    '2010-05-14', 'útočník',  4, '724 000 004', 'dostal.rodic@seznam.cz');
+
+-- Testovací zápasy
+INSERT INTO `zapasy` (`tym_id`, `souper`, `datum`, `cas`, `misto`, `typ`, `skore_domaci`, `skore_hoste`) VALUES
+(1, 'SK Jaroměř U11',      '2026-10-05', '10:00', 'Hlavní hřiště FK Náchod',  'domácí',   3, 1),
+(1, 'TJ Česká Skalice U11', '2026-10-19', '10:00', 'Hřiště Česká Skalice',    'venkovní',  2, 2),
+(2, 'FK Trutnov U13',      '2026-10-12', '14:00', 'Hlavní hřiště FK Náchod',  'domácí',   4, 0),
+(3, 'SK Nové Město U15',   '2026-11-02', '15:00', 'Hřiště Nové Město',       'venkovní',  1, 3),
+(4, 'FK Dvůr Králové U17', '2026-11-09', '16:00', 'Hlavní hřiště FK Náchod',  'domácí',   2, 1),
+(2, 'SK Hronov U13',       '2026-11-23', '14:00', 'Hlavní hřiště FK Náchod',  'domácí',   NULL, NULL),
+(3, 'FK Police U15',       '2026-12-01', '15:00', 'Hřiště Police nad Metují', 'venkovní',  NULL, NULL);
+
+-- Testovací tréninky
+INSERT INTO `treninky` (`tym_id`, `datum`, `cas_od`, `cas_do`, `misto`, `popis`) VALUES
+(1, '2026-11-11', '16:00', '17:30', 'Hlavní hřiště FK Náchod', 'Nácvik přihrávek a střelby'),
+(1, '2026-11-13', '16:00', '17:30', 'Hlavní hřiště FK Náchod', 'Herní cvičení na malém prostoru'),
+(2, '2026-11-11', '17:30', '19:00', 'Hlavní hřiště FK Náchod', 'Taktická příprava a obranná fáze'),
+(2, '2026-11-14', '17:30', '19:00', 'Hlavní hřiště FK Náchod', 'Kondiční a rychlostní trénink'),
+(3, '2026-11-12', '16:00', '18:00', 'Umělá tráva FK Náchod',    'Standardní situace a rohy'),
+(4, '2026-11-12', '18:00', '19:30', 'Umělá tráva FK Náchod',    'Příprava na mistrovské utkání');
+
