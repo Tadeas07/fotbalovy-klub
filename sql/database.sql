@@ -145,4 +145,3 @@ INSERT INTO `treninky` (`tym_id`, `datum`, `cas_od`, `cas_do`, `misto`, `popis`)
 (2, '2026-11-14', '17:30', '19:00', 'Hlavní hřiště FK Náchod', 'Kondiční a rychlostní trénink'),
 (3, '2026-11-12', '16:00', '18:00', 'Umělá tráva FK Náchod',    'Standardní situace a rohy'),
 (4, '2026-11-12', '18:00', '19:30', 'Umělá tráva FK Náchod',    'Příprava na mistrovské utkání');
-
