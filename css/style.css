@@ -14,3 +14,27 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Centrovací obal s maximální šířkou */
+.obal {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Hlavička webu a navigace */
+.hlavicka {
+    background-color: #0b3c70;
+    color: #ffffff;
+    border-bottom: 3px solid #f9a825;
+    padding: 15px 0;
+}
+
+.hlavicka .obal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
