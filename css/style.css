@@ -38,3 +38,31 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
+}
+
+.logo-nazev h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo-nazev .podtitul {
+    font-size: 0.85rem;
+    color: #cfd8dc;
+    display: block;
+}
+
+.navigace {
+    display: flex;
+    gap: 8px;
+}
+
+.navigace a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.15s ease;
