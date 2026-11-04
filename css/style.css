@@ -66,3 +66,35 @@ body {
     font-size: 0.9rem;
     background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 0.15s ease;
+}
+
+.navigace a:hover,
+.navigace a.aktivni {
+    background-color: #f9a825;
+    color: #0b3c70;
+    font-weight: 600;
+}
+
+/* Hlavní obsahová část */
+.hlavni-obsah {
+    flex: 1;
+    padding: 25px 15px 40px;
+}
+
+.nadpis-akce {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #0b3c70;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #0b3c70;
