@@ -1,5 +1,5 @@
 <?php
 require_once __DIR__ . '/db.php';
-$stmt = $pdo->query("SELECT * FROM hraci WHERE aktivni = 1");
-$hraci = $stmt->fetchAll();
+$sql = "SELECT h.*, t.nazev AS tym_nazev, t.vekova_kategorie FROM hraci h LEFT JOIN tymy t ON h.tym_id = t.id WHERE h.aktivni = 1 ORDER BY h.prijmeni ASC";
+$hraci = $pdo->query($sql)->fetchAll();
 ?>
