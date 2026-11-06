@@ -9,7 +9,7 @@ $hraci = $pdo->query($sql)->fetchAll();
 <body>
 <table class="tabulka">
 <?php foreach ($hraci as $h): ?>
-<tr><td><?= htmlspecialchars($h['prijmeni']) ?></td><td><?= htmlspecialchars($h['jmeno']) ?></td></tr>
+<tr><td><?= htmlspecialchars($h['prijmeni']) ?></td><td><?= date('d. m. Y', strtotime($h['datum_narozeni'])) ?></td></tr>
 <?php endforeach; ?>
 </table>
 </body></html>
