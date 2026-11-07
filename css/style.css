@@ -148,3 +148,33 @@ h3 {
     gap: 12px;
     flex-wrap: wrap;
 }
+
+.filtr-panel label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.filtr-panel select {
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.odkaz-reset {
+    font-size: 0.85rem;
+    color: #dc3545;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.odkaz-reset:hover {
+    text-decoration: underline;
+}
+
+/* Tabulka hráčů */
+.tabulka-obal {
+    background-color: #ffffff;
