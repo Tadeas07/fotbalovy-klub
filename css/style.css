@@ -203,3 +203,18 @@ h3 {
     padding: 10px 14px;
     border-bottom: 1px solid #e9ecef;
     vertical-align: middle;
+}
+
+.tabulka tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.tabulka-mala th,
+.tabulka-mala td {
+    padding: 7px 12px;
+}
+
+.prazdno {
+    text-align: center;
+    color: #6c757d;
+    padding: 20px !important;
