@@ -1,3 +1,5 @@
 <?php
 require_once __DIR__ . '/db.php';
-$tymy = $pdo->query("SELECT * FROM tymy WHERE aktivni = 1")->fetchAll();
+$filtr = (int)($_GET['tym'] ?? 0);
+$sql = "SELECT h.* FROM hraci h WHERE aktivni = 1";
+if ($filtr > 0) { $sql .= " AND tym_id = ?"; }
