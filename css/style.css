@@ -218,3 +218,23 @@ h3 {
     text-align: center;
     color: #6c757d;
     padding: 20px !important;
+    font-style: italic;
+}
+
+.pocitadlo {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: right;
+}
+
+/* Barevné štítky pro herní pozice */
+.stitek {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
