@@ -288,3 +288,23 @@ h3 {
 }
 
 .tlacitko-zpet:hover {
+    background-color: #e2e6ea;
+}
+
+.tlacitko-storno {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.tlacitko-storno:hover {
+    background-color: #5a6268;
+}
+
+/* Detail hráče */
+.karta-detail {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
