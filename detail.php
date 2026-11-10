@@ -6,3 +6,4 @@ $stmt = $pdo->prepare("SELECT h.*, t.nazev AS tym_nazev, t.vekova_kategorie FROM
 $stmt->execute([$id]);
 $hrac = $stmt->fetch();
 if (!$hrac) { header('Location: index.php'); exit; }
+$vek = (new DateTime())->diff(new DateTime($hrac['datum_narozeni']))->y;
