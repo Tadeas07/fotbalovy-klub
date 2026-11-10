@@ -268,3 +268,23 @@ h3 {
 
 .tlacitko-male {
     padding: 4px 10px;
+    font-size: 0.8rem;
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+}
+
+.tlacitko-male:hover {
+    background-color: #0b3c70;
+    color: #ffffff;
+    border-color: #0b3c70;
+}
+
+.tlacitko-zpet {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #ced4da;
+    margin-bottom: 15px;
+}
+
+.tlacitko-zpet:hover {
