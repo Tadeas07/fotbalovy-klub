@@ -1,4 +1,4 @@
 <?php
 require_once __DIR__ . '/db.php';
-$tymy = $pdo->query("SELECT * FROM tymy WHERE aktivni = 1")->fetchAll();
 ?>
+<input name='jmeno'><input name='prijmeni'><input type='date' name='datum_narozeni'>
