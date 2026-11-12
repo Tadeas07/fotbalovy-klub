@@ -328,3 +328,28 @@ h3 {
 .polozka .popisek {
     display: block;
     font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.polozka .hodnota {
+    font-size: 1rem;
+    color: #212529;
+}
+
+.sekce-spoluhraci {
+    margin-bottom: 25px;
+}
+
+/* Formulář pro registraci hráče */
+.formular-karta {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 25px 30px;
+    max-width: 650px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
