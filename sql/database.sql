@@ -94,3 +94,10 @@ INSERT INTO `treneri` (`jmeno`, `prijmeni`, `telefon`, `email`, `licence`) VALUE
 ('Petr', 'Svoboda', '603222333', 'svoboda@fknachod.cz', 'B'),
 ('Martin', 'Dvořák', '604333444', 'dvorak@fknachod.cz', 'C'),
 ('Tomáš', 'Černý', '605444555', 'cerny@fknachod.cz', 'B');
+
+INSERT INTO `tym_trener` (`tym_id`, `trener_id`, `role`) VALUES
+(1, 3, 'hlavni'),
+(2, 2, 'hlavni'),
+(2, 3, 'asistent'),
+(3, 1, 'hlavni'),
+(4, 4, 'hlavni');
