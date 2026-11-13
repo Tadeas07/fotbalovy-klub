@@ -65,7 +65,7 @@ $tymy = $pdo->query("SELECT id, nazev, vekova_kategorie FROM tymy WHERE aktivni 
 <h2>Seznam hráčů</h2>
 <form method="get">
     <label>Filtrovat podle týmu:</label>
-    <select name="tym">
+    <select name="tym" onchange="this.form.submit()">
         <option value="0">Všechny kategorie</option>
         <?php foreach ($tymy as $t): ?>
             <option value="<?= $t['id'] ?>" <?= $filtr_tym == $t['id'] ? 'selected' : '' ?>><?= htmlspecialchars($t['nazev']) ?></option>
@@ -82,6 +82,7 @@ $tymy = $pdo->query("SELECT id, nazev, vekova_kategorie FROM tymy WHERE aktivni 
 </main>
 </body>
 </html>
+
 
 
 
