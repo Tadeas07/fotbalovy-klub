@@ -111,3 +111,13 @@ INSERT INTO `hraci` (`jmeno`, `prijmeni`, `datum_narozeni`, `pozice`, `tym_id`, 
 ('Matyáš', 'Němec', '2014-02-28', 'obránce', 2, '722000002', 'nemec@email.cz'),
 ('Ondřej', 'Marek', '2013-09-03', 'záložník', 2, '722000003', 'marek@email.cz'),
 ('Vojtěch', 'Pospíšil', '2014-06-17', 'útočník', 2, '722000004', 'pospisil@email.cz');
+
+INSERT INTO `hraci` (`jmeno`, `prijmeni`, `datum_narozeni`, `pozice`, `tym_id`, `telefon_rodice`, `email_rodice`) VALUES
+('Tomáš', 'Beneš', '2011-04-25', 'brankář', 3, '723000001', 'benes@email.cz'),
+('David', 'Šťastný', '2012-08-12', 'obránce', 3, '723000002', 'stastny@email.cz'),
+('Jan', 'Fiala', '2011-12-01', 'záložník', 3, '723000003', 'fiala@email.cz'),
+('Martin', 'Kratochvíl', '2012-03-30', 'útočník', 3, '723000004', 'kratochvil@email.cz'),
+('Petr', 'Sedláček', '2009-06-08', 'brankář', 4, '724000001', 'sedlacek@email.cz'),
+('Karel', 'Vlček', '2010-01-19', 'obránce', 4, '724000002', 'vlcek@email.cz'),
+('Štěpán', 'Kolář', '2009-10-27', 'záložník', 4, '724000003', 'kolar@email.cz'),
+('Matěj', 'Dostál', '2010-05-14', 'útočník', 4, '724000004', 'dostal@email.cz');
