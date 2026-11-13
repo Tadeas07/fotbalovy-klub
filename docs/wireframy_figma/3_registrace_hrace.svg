@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+    <defs>
+        <style>
+            .bg { fill: #f8fafc; }
+            .header-bg { fill: #0b3c70; }
+            .header-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; font-size: 20px; }
+            .header-sub { fill: #94a3b8; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+            .nav-box { fill: rgba(255,255,255,0.15); stroke: rgba(255,255,255,0.3); rx: 4; }
+            .nav-box-active { fill: #f9a825; rx: 4; }
+            .nav-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: 500; }
+            .nav-text-active { fill: #0b3c70; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: bold; }
+            .card-bg { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 6; }
+            .btn-back { fill: #f1f5f9; stroke: #cbd5e1; rx: 4; }
+            .btn-back-text { fill: #334155; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; font-weight: 600; }
+            .h2-title { fill: #0b3c70; font-family: 'Segoe UI', Arial, sans-serif; font-size: 22px; font-weight: bold; }
+            .form-label { fill: #1e293b; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; font-weight: 600; }
+            .star { fill: #ef4444; font-weight: bold; }
+            .form-input { fill: #ffffff; stroke: #94a3b8; stroke-width: 1; rx: 4; }
+            .form-text { fill: #0f172a; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+            .hint-text { fill: #64748b; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; }
+            .hint-warn { fill: #b45309; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: 600; }
+            .btn-blue { fill: #0b3c70; rx: 4; }
+            .btn-blue-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: bold; }
+            .btn-cancel { fill: #64748b; rx: 4; }
+            .btn-cancel-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; }
+            .footer-bg { fill: #0f172a; }
+            .footer-text { fill: #64748b; font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; }
+        </style>
+    </defs>
+
+    <rect width="1200" height="850" class="bg" />
+
+    <!-- Browser Bar -->
+    <rect width="1200" height="35" fill="#e2e8f0" />
+    <circle cx="20" cy="18" r="6" fill="#ef4444" />
+    <circle cx="38" cy="18" r="6" fill="#f59e0b" />
+    <circle cx="56" cy="18" r="6" fill="#10b981" />
+    <rect x="100" y="7" width="500" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="115" y="22" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="12px">http://localhost/fotbalovy-klub/pridat.php</text>
+
+    <!-- Header -->
+    <g transform="translate(0, 35)">
+        <rect width="1200" height="80" class="header-bg" />
+        <rect y="77" width="1200" height="3" fill="#f9a825" />
+        <text x="60" y="38" class="header-text">FK Náchod - Mládež</text>
+        <text x="60" y="58" class="header-sub">Informační systém pro správu mládežnických kategorií</text>
+        <rect x="850" y="24" width="130" height="36" class="nav-box" />
+        <text x="872" y="47" class="nav-text">Seznam hráčů</text>
+        <rect x="995" y="24" width="150" height="36" class="nav-box-active" />
+        <text x="1012" y="47" class="nav-text-active">+ Přidat hráče</text>
+    </g>
+
+    <!-- Main Content -->
+    <g transform="translate(60, 140)">
+        
+        <rect width="180" height="32" class="btn-back" />
+        <text x="15" y="21" class="btn-back-text">&larr; Zpět na seznam hráčů</text>
+
+        <text x="0" y="65" class="h2-title">Registrace nového hráče</text>
+        <text x="0" y="88" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="13px">Vyplňte osobní údaje hráče a vyberte odpovídající věkovou kategorii.</text>
+
+        <!-- Form Card -->
+        <g transform="translate(0, 110)">
+            <rect width="700" height="500" class="card-bg" />
+            
+            <g transform="translate(30, 30)">
+                <!-- Row 1: Name and Surname -->
+                <g>
+                    <text x="0" y="15" class="form-label">Jméno hráče: <tspan class="star">*</tspan></text>
+                    <rect x="0" y="24" width="300" height="36" class="form-input" />
+                    <text x="15" y="47" class="form-text" fill="#94a3b8">např. Jan</text>
+
+                    <text x="340" y="15" class="form-label">Příjmení hráče: <tspan class="star">*</tspan></text>
+                    <rect x="340" y="24" width="300" height="36" class="form-input" />
+                    <text x="355" y="47" class="form-text" fill="#94a3b8">např. Novák</text>
+                </g>
+
+                <!-- Row 2: Date of Birth and Position -->
+                <g transform="translate(0, 80)">
+                    <text x="0" y="15" class="form-label">Datum narození: <tspan class="star">*</tspan></text>
+                    <rect x="0" y="24" width="300" height="36" class="form-input" />
+                    <text x="15" y="47" class="form-text">2013-05-18</text>
+                    <text x="0" y="74" class="hint-text">Podle ročníku systém zkontroluje zařazení do týmu.</text>
+
+                    <text x="340" y="15" class="form-label">Herní pozice: <tspan class="star">*</tspan></text>
+                    <rect x="340" y="24" width="300" height="36" class="form-input" />
+                    <text x="355" y="47" class="form-text">Záložník  &#9662;</text>
+                </g>
+
+                <!-- Row 3: Team with Business Logic -->
+                <g transform="translate(0, 180)">
+                    <text x="0" y="15" class="form-label">Tým (kategorie): <tspan class="star">*</tspan></text>
+                    <rect x="0" y="24" width="640" height="36" class="form-input" />
+                    <text x="15" y="47" class="form-text">FK Náchod U13 (kategorie U13, ročníky 2013 - 2014)  &#9662;</text>
+                    <text x="0" y="74" class="hint-warn">Pozor: Systém hlídá věkový limit podle oficiálních ročníků FAČR.</text>
+                </g>
+
+                <!-- Row 4: Contacts -->
+                <g transform="translate(0, 275)">
+                    <line x1="0" y1="0" x2="640" y2="0" stroke="#e2e8f0" stroke-width="1" />
+                    <text x="0" y="22" fill="#0b3c70" font-family="'Segoe UI', Arial, sans-serif" font-size="14px" font-weight="bold">Kontaktní údaje zákonného zástupce</text>
+
+                    <text x="0" y="55" class="form-label">Telefon na rodiče:</text>
+                    <rect x="0" y="64" width="300" height="36" class="form-input" />
+                    <text x="15" y="87" class="form-text" fill="#94a3b8">např. 603 123 456</text>
+
+                    <text x="340" y="55" class="form-label">E-mail na rodiče:</text>
+                    <rect x="340" y="64" width="300" height="36" class="form-input" />
+                    <text x="355" y="87" class="form-text" fill="#94a3b8">např. rodic@seznam.cz</text>
+                </g>
+
+                <!-- Buttons -->
+                <g transform="translate(0, 410)">
+                    <rect width="210" height="42" class="btn-blue" />
+                    <text x="25" y="26" class="btn-blue-text">Uložit hráče do databáze</text>
+
+                    <rect x="230" y="0" width="90" height="42" class="btn-cancel" />
+                    <text x="255" y="26" class="btn-cancel-text">Zrušit</text>
+                </g>
+            </g>
+        </g>
+    </g>
+
+    <g transform="translate(0, 800)">
+        <rect width="1200" height="50" class="footer-bg" />
+        <text x="600" y="30" class="footer-text" text-anchor="middle">Maturitní projekt: Informační systém pro mládežnický fotbalový klub | Autor: Tadeáš | Školní rok 2026/2027</text>
+    </g>
+</svg>

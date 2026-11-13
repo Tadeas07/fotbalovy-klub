@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+    <defs>
+        <style>
+            .bg { fill: #f8fafc; }
+            .header-bg { fill: #0b3c70; }
+            .header-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; font-size: 20px; }
+            .header-sub { fill: #94a3b8; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+            .nav-box { fill: rgba(255,255,255,0.15); stroke: rgba(255,255,255,0.3); rx: 4; }
+            .nav-box-active { fill: #f9a825; rx: 4; }
+            .nav-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: 500; }
+            .nav-text-active { fill: #0b3c70; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: bold; }
+            .status-bg { fill: #e0f2fe; stroke: #0284c7; stroke-width: 1; rx: 6; }
+            .status-text { fill: #0369a1; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+            .h2-title { fill: #0b3c70; font-family: 'Segoe UI', Arial, sans-serif; font-size: 22px; font-weight: bold; }
+            .card-bg { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1; rx: 6; }
+            .filter-label { fill: #334155; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: 600; }
+            .filter-input { fill: #f1f5f9; stroke: #94a3b8; rx: 4; }
+            .filter-val { fill: #0f172a; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+            .th-bg { fill: #0b3c70; }
+            .th-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; font-weight: 600; }
+            .td-text { fill: #1e293b; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+            .td-border { stroke: #e2e8f0; stroke-width: 1; }
+            .badge-bg { fill: #fef3c7; stroke: #fde68a; rx: 3; }
+            .badge-text { fill: #92400e; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: bold; }
+            .btn-blue { fill: #0b3c70; rx: 4; }
+            .btn-blue-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; font-weight: bold; }
+            .btn-gray { fill: #e2e8f0; stroke: #cbd5e1; rx: 4; }
+            .btn-gray-text { fill: #334155; font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; }
+            .footer-bg { fill: #0f172a; }
+            .footer-text { fill: #64748b; font-family: 'Segoe UI', Arial, sans-serif; font-size: 12px; }
+        </style>
+    </defs>
+
+    <!-- Canvas Background -->
+    <rect width="1200" height="850" class="bg" />
+
+    <!-- Browser Bar Mockup -->
+    <rect width="1200" height="35" fill="#e2e8f0" />
+    <circle cx="20" cy="18" r="6" fill="#ef4444" />
+    <circle cx="38" cy="18" r="6" fill="#f59e0b" />
+    <circle cx="56" cy="18" r="6" fill="#10b981" />
+    <rect x="100" y="7" width="500" height="22" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="115" y="22" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="12px">http://localhost/fotbalovy-klub/index.php</text>
+
+    <!-- Header -->
+    <g transform="translate(0, 35)">
+        <rect width="1200" height="80" class="header-bg" />
+        <rect y="77" width="1200" height="3" fill="#f9a825" />
+        <text x="60" y="38" class="header-text">FK Náchod - Mládež</text>
+        <text x="60" y="58" class="header-sub">Informační systém pro správu mládežnických kategorií</text>
+        
+        <!-- Navigation Menu -->
+        <rect x="850" y="24" width="130" height="36" class="nav-box-active" />
+        <text x="872" y="47" class="nav-text-active">Seznam hráčů</text>
+        
+        <rect x="995" y="24" width="150" height="36" class="nav-box" />
+        <text x="1012" y="47" class="nav-text">+ Přidat hráče</text>
+    </g>
+
+    <!-- Main Container -->
+    <g transform="translate(60, 140)">
+        
+        <!-- Status Box -->
+        <rect width="1080" height="42" class="status-bg" />
+        <text x="20" y="26" class="status-text">
+            <tspan font-weight="bold">Stav projektu (k 13. 11.):</tspan> Rozpracovaná verze aplikace. Funkční přehled načtený z databáze s filtrováním, detail a registrace s kontrolou ročníků.
+        </text>
+
+        <!-- Section Title & Add Button -->
+        <g transform="translate(0, 65)">
+            <text x="0" y="24" class="h2-title">Seznam registrovaných hráčů</text>
+            <rect x="940" y="0" width="140" height="34" class="btn-blue" />
+            <text x="965" y="22" class="btn-blue-text">+ Přidat hráče</text>
+        </g>
+
+        <!-- Filter Bar -->
+        <g transform="translate(0, 115)">
+            <rect width="1080" height="55" class="card-bg" />
+            <text x="25" y="33" class="filter-label">Filtrovat podle kategorie týmu:</text>
+            <rect x="250" y="14" width="260" height="28" class="filter-input" />
+            <text x="265" y="33" class="filter-val">-- Všechny kategorie --  &#9662;</text>
+        </g>
+
+        <!-- Table -->
+        <g transform="translate(0, 190)">
+            <rect width="1080" height="360" class="card-bg" />
+            
+            <!-- Table Header -->
+            <rect width="1080" height="40" class="th-bg" />
+            <text x="20" y="25" class="th-text">#</text>
+            <text x="70" y="25" class="th-text">Příjmení</text>
+            <text x="230" y="25" class="th-text">Jméno</text>
+            <text x="390" y="25" class="th-text">Datum narození</text>
+            <text x="560" y="25" class="th-text">Herní pozice</text>
+            <text x="730" y="25" class="th-text">Tým (kategorie)</text>
+            <text x="960" y="25" class="th-text">Akce</text>
+
+            <!-- Row 1 -->
+            <line x1="0" y1="85" x2="1080" y2="85" class="td-border" />
+            <text x="20" y="68" class="td-text">1</text>
+            <text x="70" y="68" class="td-text" font-weight="bold">Beneš</text>
+            <text x="230" y="68" class="td-text">Tomáš</text>
+            <text x="390" y="68" class="td-text">25. 04. 2011</text>
+            <rect x="560" y="52" width="75" height="22" class="badge-bg" />
+            <text x="572" y="67" class="badge-text">BRANKÁŘ</text>
+            <text x="730" y="68" class="td-text">FK Náchod U15 (U15)</text>
+            <rect x="960" y="53" width="65" height="24" class="btn-gray" />
+            <text x="977" y="69" class="btn-gray-text">Detail</text>
+
+            <!-- Row 2 -->
+            <line x1="0" y1="130" x2="1080" y2="130" class="td-border" />
+            <text x="20" y="113" class="td-text">2</text>
+            <text x="70" y="113" class="td-text" font-weight="bold">Dostál</text>
+            <text x="230" y="113" class="td-text">Matěj</text>
+            <text x="390" y="113" class="td-text">14. 05. 2010</text>
+            <rect x="560" y="97" width="70" height="22" fill="#fee2e2" stroke="#fecaca" rx="3" />
+            <text x="573" y="112" fill="#991b1b" font-family="'Segoe UI', Arial, sans-serif" font-size="11px" font-weight="bold">ÚTOČNÍK</text>
+            <text x="730" y="113" class="td-text">FK Náchod U17 (U17)</text>
+            <rect x="960" y="98" width="65" height="24" class="btn-gray" />
+            <text x="977" y="114" class="btn-gray-text">Detail</text>
+
+            <!-- Row 3 -->
+            <line x1="0" y1="175" x2="1080" y2="175" class="td-border" />
+            <text x="20" y="158" class="td-text">3</text>
+            <text x="70" y="158" class="td-text" font-weight="bold">Horák</text>
+            <text x="230" y="158" class="td-text">Daniel</text>
+            <text x="390" y="158" class="td-text">18. 05. 2013</text>
+            <rect x="560" y="142" width="75" height="22" class="badge-bg" />
+            <text x="572" y="157" class="badge-text">BRANKÁŘ</text>
+            <text x="730" y="158" class="td-text">FK Náchod U13 (U13)</text>
+            <rect x="960" y="143" width="65" height="24" class="btn-gray" />
+            <text x="977" y="159" class="btn-gray-text">Detail</text>
+
+            <!-- Row 4 -->
+            <line x1="0" y1="220" x2="1080" y2="220" class="td-border" />
+            <text x="20" y="203" class="td-text">4</text>
+            <text x="70" y="203" class="td-text" font-weight="bold">Malý</text>
+            <text x="230" y="203" class="td-text">Lukáš</text>
+            <text x="390" y="203" class="td-text">14. 03. 2015</text>
+            <rect x="560" y="187" width="75" height="22" class="badge-bg" />
+            <text x="572" y="202" class="badge-text">BRANKÁŘ</text>
+            <text x="730" y="203" class="td-text">FK Náchod U11 (U11)</text>
+            <rect x="960" y="188" width="65" height="24" class="btn-gray" />
+            <text x="977" y="204" class="btn-gray-text">Detail</text>
+
+            <!-- Counter -->
+            <text x="930" y="335" fill="#64748b" font-family="'Segoe UI', Arial, sans-serif" font-size="12px">Celkem hráčů: <tspan font-weight="bold" fill="#0f172a">16</tspan></text>
+        </g>
+    </g>
+
+    <!-- Footer -->
+    <g transform="translate(0, 800)">
+        <rect width="1200" height="50" class="footer-bg" />
+        <text x="600" y="30" class="footer-text" text-anchor="middle">Maturitní projekt: Informační systém pro mládežnický fotbalový klub | Autor: Tadeáš | Školní rok 2026/2027</text>
+    </g>
+</svg>
