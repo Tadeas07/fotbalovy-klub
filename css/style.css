@@ -1,19 +1,481 @@
-﻿*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 15px; line-height: 1.5; color: #212529; background-color: #f4f6f9; }
-.obal { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
+/* ============================================================
+   Kaskádové styly pro webovou aplikaci FK Náchod (Mládež)
+   Autor: Tadeáš - SPŠE Litomyšl
+   ============================================================ */
 
-.hlavicka { background-color: #0b3c70; color: #ffffff; padding: 15px 0; border-bottom: 3px solid #f9a825; }
-.logo-nazev h1 { font-size: 1.5rem; }
-.navigace a { color: #ffffff; text-decoration: none; padding: 8px 14px; border-radius: 4px; }
-.navigace a:hover, .navigace a.aktivni { background-color: #f9a825; color: #0b3c70; }
+/* Základní reset a nastavení box-sizingu */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-.tabulka { width: 100%; border-collapse: collapse; background-color: #ffffff; border: 1px solid #dee2e6; }
-.tabulka th { background-color: #0b3c70; color: #ffffff; padding: 10px 14px; text-align: left; }
-.tabulka td { padding: 10px 14px; border-bottom: 1px solid #e9ecef; }
-.tabulka tbody tr:hover { background-color: #f8f9fa; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-.stitek { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
-.post-brankář { background-color: #fff3cd; color: #856404; }
-.post-obránce { background-color: #d4edda; color: #155724; }
-.post-záložník { background-color: #d1ecf1; color: #0c5460; }
-.post-útočník { background-color: #f8d7da; color: #721c24; }
+/* Obal pro vycentrování obsahu */
+.obal {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Hlavička webu */
+.hlavicka {
+    background-color: #0b3c70;
+    color: #ffffff;
+    border-bottom: 3px solid #f9a825;
+    padding: 15px 0;
+}
+
+.hlavicka .obal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-nazev h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.logo-nazev .podtitul {
+    font-size: 0.85rem;
+    color: #cfd8dc;
+    display: block;
+}
+
+/* Navigace */
+.navigace {
+    display: flex;
+    gap: 8px;
+}
+
+.navigace a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.15s ease;
+}
+
+.navigace a:hover,
+.navigace a.aktivni {
+    background-color: #f9a825;
+    color: #0b3c70;
+    font-weight: 600;
+}
+
+/* Hlavní obsah */
+.hlavni-obsah {
+    flex: 1;
+    padding: 25px 15px 40px;
+}
+
+/* Informační status box (pro rozpracovanou verzi) */
+.status-box {
+    background-color: #e8f4fd;
+    border-left: 4px solid #1976d2;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+    color: #0d47a1;
+}
+
+/* Nadpisy */
+.nadpis-akce {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #0b3c70;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #0b3c70;
+    margin-bottom: 12px;
+}
+
+.podnadpis-text {
+    color: #6c757d;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Upozornění / Alerty */
+.upozorneni {
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.upozorneni-uspech {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.upozorneni-chyba {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.upozorneni-chyba ul {
+    margin-top: 6px;
+    margin-left: 20px;
+}
+
+/* Filtrovací panel */
+.filtr-panel {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.filtr-panel form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filtr-panel label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.filtr-panel select {
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.odkaz-reset {
+    font-size: 0.85rem;
+    color: #dc3545;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.odkaz-reset:hover {
+    text-decoration: underline;
+}
+
+/* Tabulky */
+.tabulka-obal {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow-x: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tabulka {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabulka th {
+    background-color: #0b3c70;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tabulka td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+.tabulka tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.tabulka-mala th,
+.tabulka-mala td {
+    padding: 7px 12px;
+}
+
+.prazdno {
+    text-align: center;
+    color: #6c757d;
+    padding: 20px !important;
+    font-style: italic;
+}
+
+.pocitadlo {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: right;
+}
+
+/* Štítky pro posty (pozice) */
+.stitek {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.post-brankář  { background-color: #fff3cd; color: #856404; border: 1px solid #ffeeba; }
+.post-obránce  { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.post-záložník { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+.post-útočník  { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+
+/* Tlačítka */
+.tlacitko {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.15s ease-in-out;
+}
+
+.tlacitko-hlavni {
+    background-color: #0b3c70;
+    color: #ffffff;
+}
+
+.tlacitko-hlavni:hover {
+    background-color: #07274a;
+}
+
+.tlacitko-male {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+}
+
+.tlacitko-male:hover {
+    background-color: #0b3c70;
+    color: #ffffff;
+    border-color: #0b3c70;
+}
+
+.tlacitko-zpet {
+    background-color: #f8f9fa;
+    color: #495057;
+    border: 1px solid #ced4da;
+    margin-bottom: 15px;
+}
+
+.tlacitko-zpet:hover {
+    background-color: #e2e6ea;
+}
+
+.tlacitko-zrusit {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.tlacitko-zrusit:hover {
+    background-color: #5a6268;
+}
+
+/* Karta detailu hráče */
+.karta-detail {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.karta-hlavicka {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.polozky-mrizka {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.polozka .popisek {
+    display: block;
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.polozka .hodnota {
+    font-size: 1rem;
+    color: #212529;
+}
+
+.sekce-spoluhraci {
+    margin-bottom: 25px;
+}
+
+.poznamka-etapa {
+    font-size: 0.85rem;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border: 1px dashed #ced4da;
+    padding: 10px 14px;
+    border-radius: 4px;
+}
+
+/* Formulář */
+.formular-karta {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 25px 30px;
+    max-width: 650px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.form-radek {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.form-radek .form-skupina {
+    flex: 1;
+    min-width: 220px;
+}
+
+.form-skupina {
+    margin-bottom: 15px;
+}
+
+.form-skupina label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.hvezdicka {
+    color: #dc3545;
+}
+
+.form-skupina input[type="text"],
+.form-skupina input[type="date"],
+.form-skupina input[type="email"],
+.form-skupina input[type="tel"],
+.form-skupina select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.form-skupina input:focus,
+.form-skupina select:focus {
+    border-color: #0b3c70;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(11, 60, 112, 0.15);
+}
+
+.napoveda {
+    display: block;
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 4px;
+}
+
+.napoveda-zvyrazneni {
+    color: #b78103;
+    font-weight: 500;
+}
+
+.oddelovac {
+    border: none;
+    border-top: 1px solid #e9ecef;
+    margin: 20px 0 15px;
+}
+
+.form-tlacitka {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* Patička */
+.paticka {
+    background-color: #1a252f;
+    color: #adb5bd;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: auto;
+}
+
+/* Mobilní zobrazení */
+@media (max-width: 768px) {
+    .hlavicka .obal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navigace {
+        width: 100%;
+    }
+    
+    .form-radek {
+        flex-direction: column;
+        gap: 0;
+    }
+}
