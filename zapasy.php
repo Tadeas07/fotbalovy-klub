@@ -13,3 +13,4 @@ $zapasy = $pdo->query("SELECT z.*, t.nazev AS tym_nazev FROM zapasy z JOIN tymy 
 <?php endforeach; ?>
 </table>
 </main></body></html>
+
