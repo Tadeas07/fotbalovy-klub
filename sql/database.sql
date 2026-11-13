@@ -88,3 +88,9 @@ INSERT INTO `tymy` (`nazev`, `vekova_kategorie`, `rok_narozeni_od`, `rok_narozen
 ('FK Náchod U13', 'U13', 2013, 2014),
 ('FK Náchod U15', 'U15', 2011, 2012),
 ('FK Náchod U17', 'U17', 2009, 2010);
+
+INSERT INTO `treneri` (`jmeno`, `prijmeni`, `telefon`, `email`, `licence`) VALUES
+('Jan', 'Novák', '602111222', 'novak@fknachod.cz', 'UEFA_B'),
+('Petr', 'Svoboda', '603222333', 'svoboda@fknachod.cz', 'B'),
+('Martin', 'Dvořák', '604333444', 'dvorak@fknachod.cz', 'C'),
+('Tomáš', 'Černý', '605444555', 'cerny@fknachod.cz', 'B');
