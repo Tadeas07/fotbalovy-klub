@@ -16,7 +16,22 @@ $hrac = $stmt->fetch();
 <p>Pozice: <?= htmlspecialchars($hrac['pozice']) ?></p>
 <p>Tým: <?= htmlspecialchars($hrac['tym_nazev'] ?? 'Bez týmu') ?></p>
 <p>Telefon rodiče: <?= htmlspecialchars($hrac['telefon_rodice'] ?: 'Neuvedeno') ?></p>
-<p>E-mail rodiče: <?= htmlspecialchars($hrac['email_rodice'] ?: 'Neuvedeno') ?></p></main></body></html>
+<p>E-mail rodiče: <?= htmlspecialchars($hrac['email_rodice'] ?: 'Neuvedeno') ?></p><h3>Spoluhráči v týmu</h3>
+<?php
+$spol = [];
+if ($hrac['tym_id']) {
+    $st = $pdo->prepare("SELECT id, jmeno, prijmeni, pozice, datum_narozeni FROM hraci WHERE tym_id = ? AND id != ? AND aktivni = 1 ORDER BY prijmeni");
+    $st->execute([$hrac['tym_id'], $id]);
+    $spol = $st->fetchAll();
+}
+?>
+<ul>
+<?php foreach ($spol as $s): ?>
+    <li><?= htmlspecialchars($s['prijmeni'] . ' ' . $s['jmeno']) ?> (<?= htmlspecialchars($s['pozice']) ?>)</li>
+<?php endforeach; ?>
+</ul>
+</main></body></html>
+
 
 
 
