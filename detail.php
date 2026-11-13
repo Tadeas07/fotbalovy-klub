@@ -6,8 +6,23 @@ if ($id <= 0) { header('Location: index.php'); exit; }
 <!DOCTYPE html>
 <html lang="cs">
 <head><meta charset="UTF-8"><title>Detail hráče</title></head>
-<body><header><h1>⚽ FK Náchod – Mládež</h1></header><main class="container"><h2><?= htmlspecialchars($hrac['prijmeni'] . ' ' . $hrac['jmeno']) ?></h2></main></body>
+<body><header><h1>⚽ FK Náchod – Mládež</h1></header><main class="container"><h2><?= htmlspecialchars($hrac['prijmeni'] . ' ' . $hrac['jmeno']) ?></h2><h3>Spoluhráči v týmu</h3>
+<?php
+$spolaci = [];
+if ($hrac['tym_id']) {
+    $st = $pdo->prepare("SELECT id, jmeno, prijmeni, pozice FROM hraci WHERE tym_id = ? AND id != ? AND aktivni = 1 ORDER BY prijmeni");
+    $st->execute([$hrac['tym_id'], $id]);
+    $spolaci = $st->fetchAll();
+}
+?>
+<table>
+<?php foreach ($spolaci as $s): ?>
+    <tr><td><?= htmlspecialchars($s['prijmeni'] . ' ' . $s['jmeno']) ?></td><td><?= htmlspecialchars($s['pozice']) ?></td></tr>
+<?php endforeach; ?>
+</table>
+</main></body>
 </html>
+
 
 
 
