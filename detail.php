@@ -12,7 +12,9 @@ $stmt->execute([$id]);
 $hrac = $stmt->fetch();
 ?>
 <h2><?= htmlspecialchars($hrac['prijmeni'] . ' ' . $hrac['jmeno']) ?></h2>
+<p>Datum narození: <?= date('d. m. Y', strtotime($hrac['datum_narozeni'])) ?> (věk: <?= $vek ?> let)</p>
 <p>Pozice: <?= htmlspecialchars($hrac['pozice']) ?></p>
 <p>Tým: <?= htmlspecialchars($hrac['tym_nazev'] ?? 'Bez týmu') ?></p></main></body></html>
+
 
 
