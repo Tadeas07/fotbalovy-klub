@@ -38,3 +38,18 @@ CREATE TABLE IF NOT EXISTS `tym_trener` (
     FOREIGN KEY (`trener_id`) REFERENCES `treneri`(`id`) ON DELETE CASCADE,
     UNIQUE KEY `uq_tym_trener` (`tym_id`, `trener_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
+
+-- 4. Tabulka hráčů
+CREATE TABLE IF NOT EXISTS `hraci` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `jmeno` VARCHAR(50) NOT NULL,
+    `prijmeni` VARCHAR(50) NOT NULL,
+    `datum_narozeni` DATE NOT NULL,
+    `pozice` ENUM('brankář', 'obránce', 'záložník', 'útočník') NOT NULL,
+    `tym_id` INT DEFAULT NULL,
+    `telefon_rodice` VARCHAR(20) DEFAULT NULL,
+    `email_rodice` VARCHAR(100) DEFAULT NULL,
+    `aktivni` TINYINT(1) NOT NULL DEFAULT 1,
+    `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
