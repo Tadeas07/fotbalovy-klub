@@ -20,8 +20,23 @@ if ($hrac['tym_id']) {
     <tr><td><?= htmlspecialchars($s['prijmeni'] . ' ' . $s['jmeno']) ?></td><td><?= htmlspecialchars($s['pozice']) ?></td></tr>
 <?php endforeach; ?>
 </table>
+<h3>Poslední zápasy týmu</h3>
+<?php
+$zapasy = [];
+if ($hrac['tym_id']) {
+    $st2 = $pdo->prepare("SELECT * FROM zapasy WHERE tym_id = ? ORDER BY datum DESC LIMIT 5");
+    $st2->execute([$hrac['tym_id']]);
+    $zapasy = $st2->fetchAll();
+}
+?>
+<table>
+<?php foreach ($zapasy as $z): ?>
+    <tr><td><?= date('d. m. Y', strtotime($z['datum'])) ?></td><td><?= htmlspecialchars($z['souper']) ?></td></tr>
+<?php endforeach; ?>
+</table>
 </main></body>
 </html>
+
 
 
 
