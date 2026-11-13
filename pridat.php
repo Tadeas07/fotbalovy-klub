@@ -1,5 +1,6 @@
 ﻿<?php
 require_once __DIR__ . '/db.php';
+$tymy = $pdo->query("SELECT id, nazev, vekova_kategorie, rok_narozeni_od, rok_narozeni_do FROM tymy WHERE aktivni = 1 ORDER BY vekova_kategorie")->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="cs"><head><meta charset="UTF-8"><title>Přidat hráče</title></head>
@@ -9,6 +10,10 @@ require_once __DIR__ . '/db.php';
 <form method="post">
     <input type="text" name="jmeno" placeholder="Jméno"><br>
     <input type="text" name="prijmeni" placeholder="Příjmení"><br>
-    <button type="submit">Uložit</button>
+    <select name="tym_id"><option value="0">— Vyberte tým —</option>
+<?php foreach ($tymy as $t): ?><option value="<?= $t['id'] ?>"><?= htmlspecialchars($t['nazev']) ?></option><?php endforeach; ?>
+</select><br>
+<button type="submit">Uložit</button>
 </form>
 </main></body></html>
+
