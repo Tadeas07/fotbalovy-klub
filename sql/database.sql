@@ -52,3 +52,19 @@ CREATE TABLE `hraci` (
     `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB;
+
+-- 5) Zápasy
+CREATE TABLE `zapasy` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `tym_id` INT NOT NULL,
+    `souper` VARCHAR(100) NOT NULL,
+    `datum` DATE NOT NULL,
+    `cas` TIME DEFAULT NULL,
+    `misto` VARCHAR(150) DEFAULT NULL,
+    `typ` ENUM('domácí','venkovní') NOT NULL DEFAULT 'domácí',
+    `skore_domaci` INT DEFAULT NULL,
+    `skore_hoste` INT DEFAULT NULL,
+    `poznamka` TEXT DEFAULT NULL,
+    `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB;
