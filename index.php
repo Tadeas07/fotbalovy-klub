@@ -14,10 +14,12 @@ $hraci = $pdo->query("SELECT h.*, t.nazev AS tym_nazev, t.vekova_kategorie FROM 
         <?php foreach ($hraci as $h): ?>
             <tr><td><?= htmlspecialchars($h['prijmeni']) ?></td><td><?= htmlspecialchars($h['jmeno']) ?></td></tr>
         <?php endforeach; ?>
+<?php endif; ?>
     </table>
 </main>
 </body>
 </html>
+
 
 
 
