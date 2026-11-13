@@ -2,3 +2,8 @@
 body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; color: #1a1a2e; line-height: 1.6; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 header { background: #1a5276; color: #fff; padding: 15px 0; }
+
+table { width: 100%; border-collapse: collapse; background: #fff; margin-top: 20px; }
+th { background: #1a5276; color: #fff; padding: 10px; text-align: left; }
+td { padding: 8px 10px; border-bottom: 1px solid #eee; }
+tbody tr:hover { background: #f8f9fa; }
