@@ -6,7 +6,7 @@ if ($id <= 0) { header('Location: index.php'); exit; }
 <!DOCTYPE html>
 <html lang="cs"><head><meta charset="UTF-8"><title>Detail hráče</title><link rel="stylesheet" href="css/style.css"></head>
 <body><header class="hlavicka"><div class="obal"><h1>FK Náchod - Mládež</h1></div></header>
-<main class="obal"><?php
+<main class="obal"><a href="index.php">&larr; Zpět na seznam hráčů</a><?php
 $stmt = $pdo->prepare("SELECT h.*, t.nazev AS tym_nazev, t.vekova_kategorie FROM hraci h LEFT JOIN tymy t ON h.tym_id = t.id WHERE h.id = ?");
 $stmt->execute([$id]);
 $hrac = $stmt->fetch();
@@ -31,6 +31,7 @@ if ($hrac['tym_id']) {
 <?php endforeach; ?>
 </ul>
 </main></body></html>
+
 
 
 
