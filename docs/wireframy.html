@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FK Náchod – Grafické wireframy a navigace</title>
+    <style>
+        :root {
+            --wf-bg: #f8fafc;
+            --wf-border: #94a3b8;
+            --wf-box: #e2e8f0;
+            --wf-text: #334155;
+            --wf-accent: #2563eb;
+            --wf-header: #1e293b;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            margin: 0;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .nav-pills {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        .pill {
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            border: 1px solid #334155;
+            font-weight: 500;
+        }
+        .pill:hover {
+            background: #2563eb;
+            color: #fff;
+        }
+        .section-card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 40px;
+            border: 1px solid #334155;
+        }
+        .section-card h2 {
+            color: #f8fafc;
+            margin-top: 0;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+        }
+        /* Wireframe Mockup Canvas */
+        .wf-mockup {
+            background: #ffffff;
+            color: #1e293b;
+            border-radius: 8px;
+            border: 2px dashed #94a3b8;
+            padding: 20px;
+            margin-top: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            font-family: monospace;
+        }
+        .wf-header {
+            background: #cbd5e1;
+            padding: 12px 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #94a3b8;
+            margin-bottom: 20px;
+        }
+        .wf-logo {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .wf-nav {
+            display: flex;
+            gap: 10px;
+        }
+        .wf-nav-item {
+            background: #fff;
+            padding: 4px 10px;
+            border: 1px solid #94a3b8;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        .wf-box {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .wf-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .wf-table th, .wf-table td {
+            border: 1px solid #cbd5e1;
+            padding: 8px 10px;
+            text-align: left;
+            font-size: 0.85rem;
+        }
+        .wf-table th {
+            background: #e2e8f0;
+        }
+        .wf-badge {
+            display: inline-block;
+            background: #94a3b8;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+        .wf-input {
+            width: 100%;
+            background: #fff;
+            border: 1px solid #94a3b8;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 4px;
+            box-sizing: border-box;
+        }
+        .wf-btn {
+            background: #64748b;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 4px;
+            border: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .wf-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .wf-stat-box {
+            background: #e2e8f0;
+            border: 1px solid #cbd5e1;
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        .wf-sitemap {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+        .wf-sitemap-node {
+            background: #1e293b;
+            border: 2px solid #38bdf8;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-align: center;
+            color: #f8fafc;
+            min-width: 160px;
+        }
+        .wf-sitemap-node.sub {
+            border-color: #94a3b8;
+            background: #0f172a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📐 FK Náchod – Wireframy a Mapa stránek</h1>
+    <p class="subtitle">Grafické návrhy uživatelského rozhraní pro maturitní projekt SPŠE Litomyšl</p>
+
+    <div class="nav-pills">
+        <a href="#sitemap" class="pill">🗺️ Mapa stránek</a>
+        <a href="#wf1" class="pill">1. Přehled hráčů (index)</a>
+        <a href="#wf2" class="pill">2. Detail hráče (detail)</a>
+        <a href="#wf3" class="pill">3. Formulář pro přidání (pridat)</a>
+        <a href="#wf4" class="pill">4. Aplikační logika (zapasy)</a>
+    </div>
+
+    <!-- Sitemap -->
+    <div id="sitemap" class="section-card">
+        <h2>🗺️ Mapa stránek / Struktura navigace</h2>
+        <p>Informační architektura webové aplikace zobrazující provázanost hlavních sekcí:</p>
+        <div class="wf-sitemap">
+            <div class="wf-sitemap-node">
+                <strong>[Header / Hlavní menu]</strong>
+                <div style="font-size:0.8rem; color:#94a3b8; margin-top:5px;">Globální navigace</div>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 1.5rem; color:#38bdf8; margin: -10px 0 10px;">↓</div>
+        <div class="wf-sitemap">
+            <div class="wf-sitemap-node sub">
+                <strong>index.php</strong><br>
+                <small>Přehled hráčů + filtry</small>
+            </div>
+            <div class="wf-sitemap-node sub">
+                <strong>zapasy.php</strong><br>
+                <small>Zápasy + zadání skóre + statistiky</small>
+            </div>
+            <div class="wf-sitemap-node sub">
+                <strong>treninky.php</strong><br>
+                <small>Rozvrh tréninků</small>
+            </div>
+            <div class="wf-sitemap-node sub">
+                <strong>pridat.php</strong><br>
+                <small>Formulář + validace věku</small>
+            </div>
+        </div>
+        <div style="text-align: center; font-size: 1.5rem; color:#38bdf8; margin: -10px 0 10px;">↳ detail.php?id=X (Detail hráče s vazbou na spoluhráče a zápasy)</div>
+    </div>
+
+    <!-- Wireframe 1 -->
+    <div id="wf1" class="section-card">
+        <h2>1. Wireframe: Přehled hráčů (`index.php`)</h2>
+        <div class="wf-mockup">
+            <div class="wf-header">
+                <div class="wf-logo">⚽ FK Náchod – Mládež</div>
+                <div class="wf-nav">
+                    <span class="wf-nav-item" style="background:#cbd5e1;">[Hráči]</span>
+                    <span class="wf-nav-item">[Zápasy]</span>
+                    <span class="wf-nav-item">[Tréninky]</span>
+                    <span class="wf-nav-item">[+ Přidat hráče]</span>
+                </div>
+            </div>
+            <div class="wf-box" style="display:flex; justify-content:space-between; align-items:center;">
+                <div><strong>Filtrovat podle týmu:</strong> [ Rozbalovací nabídka týmů ▼ ]</div>
+                <div><span class="wf-badge">16 aktivních hráčů</span></div>
+            </div>
+            <table class="wf-table">
+                <thead>
+                    <tr><th>#</th><th>Příjmení</th><th>Jméno</th><th>Narození</th><th>Pozice</th><th>Tým</th><th>Akce</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Beneš</td><td>Tomáš</td><td>25.04.2011</td><td><span class="wf-badge">Brankář</span></td><td>FK Náchod U15</td><td>[Detail]</td></tr>
+                    <tr><td>2</td><td>Dostál</td><td>Matěj</td><td>14.05.2010</td><td><span class="wf-badge">Útočník</span></td><td>FK Náchod U17</td><td>[Detail]</td></tr>
+                    <tr><td>3</td><td>Horák</td><td>Daniel</td><td>18.05.2013</td><td><span class="wf-badge">Brankář</span></td><td>FK Náchod U13</td><td>[Detail]</td></tr>
+                    <tr><td>4</td><td>Malý</td><td>Lukáš</td><td>14.03.2015</td><td><span class="wf-badge">Brankář</span></td><td>FK Náchod U11</td><td>[Detail]</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Wireframe 2 -->
+    <div id="wf2" class="section-card">
+        <h2>2. Wireframe: Detail hráče (`detail.php`)</h2>
+        <div class="wf-mockup">
+            <div class="wf-header">
+                <div class="wf-logo">⚽ FK Náchod – Mládež</div>
+                <div class="wf-nav">
+                    <span class="wf-nav-item">[Hráči]</span>
+                    <span class="wf-nav-item">[Zápasy]</span>
+                    <span class="wf-nav-item">[Tréninky]</span>
+                </div>
+            </div>
+            <div class="wf-btn" style="margin-bottom:15px;">← Zpět na přehled</div>
+            <div class="wf-box" style="border:2px solid #64748b;">
+                <h3>Kratochvíl Martin</h3>
+                <hr style="border:0; border-top:1px solid #cbd5e1; margin:10px 0;">
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                    <div>Datum narození: 30. 03. 2012 (14 let)</div>
+                    <div>Herní pozice: <span class="wf-badge">Útočník</span></div>
+                    <div>Tým: FK Náchod U15 (U15)</div>
+                    <div>Stav: ✅ Aktivní</div>
+                    <div>Telefon rodiče: 723000004</div>
+                    <div>E-mail rodiče: kratochvil@email.cz</div>
+                </div>
+            </div>
+            <h4>Spoluhráči v týmu</h4>
+            <table class="wf-table">
+                <thead><tr><th>Jméno</th><th>Pozice</th><th></th></tr></thead>
+                <tbody>
+                    <tr><td>Beneš Tomáš</td><td><span class="wf-badge">Brankář</span></td><td>[Detail]</td></tr>
+                    <tr><td>Fiala Jan</td><td><span class="wf-badge">Záložník</span></td><td>[Detail]</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Wireframe 3 -->
+    <div id="wf3" class="section-card">
+        <h2>3. Wireframe: Formulář pro přidání hráče (`pridat.php`)</h2>
+        <div class="wf-mockup">
+            <div class="wf-header">
+                <div class="wf-logo">⚽ FK Náchod – Mládež</div>
+                <div class="wf-nav">
+                    <span class="wf-nav-item">[Hráči]</span>
+                    <span class="wf-nav-item">[+ Přidat hráče]</span>
+                </div>
+            </div>
+            <div class="wf-box" style="max-width:550px;">
+                <h3>Přidat nového hráče</h3>
+                <div style="margin-bottom:10px;">
+                    <label>Jméno *</label>
+                    <input class="wf-input" type="text" placeholder="Jan">
+                </div>
+                <div style="margin-bottom:10px;">
+                    <label>Příjmení *</label>
+                    <input class="wf-input" type="text" placeholder="Novák">
+                </div>
+                <div style="margin-bottom:10px;">
+                    <label>Datum narození *</label>
+                    <input class="wf-input" type="date">
+                </div>
+                <div style="margin-bottom:10px;">
+                    <label>Pozice *</label>
+                    <select class="wf-input"><option>— Vyberte pozici —</option><option>Útočník</option></select>
+                </div>
+                <div style="margin-bottom:10px;">
+                    <label>Tým *</label>
+                    <select class="wf-input"><option>FK Náchod U13 (ročníky 2013–2014)</option></select>
+                    <small style="color:#d97706;">⚠️ Věk hráče musí odpovídat věkové kategorii týmu.</small>
+                </div>
+                <div class="wf-btn">💾 Uložit hráče</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wireframe 4 -->
+    <div id="wf4" class="section-card">
+        <h2>4. Wireframe: Stránka s aplikační logikou – Zápasy (`zapasy.php`)</h2>
+        <div class="wf-mockup">
+            <div class="wf-header">
+                <div class="wf-logo">⚽ FK Náchod – Mládež</div>
+                <div class="wf-nav">
+                    <span class="wf-nav-item">[Hráči]</span>
+                    <span class="wf-nav-item" style="background:#cbd5e1;">[Zápasy]</span>
+                    <span class="wf-nav-item">[Tréninky]</span>
+                </div>
+            </div>
+            <div class="wf-stats">
+                <div class="wf-stat-box"><strong style="font-size:1.5rem; color:#16a34a;">3</strong><br>Výher</div>
+                <div class="wf-stat-box"><strong style="font-size:1.5rem; color:#ca8a04;">1</strong><br>Remíz</div>
+                <div class="wf-stat-box"><strong style="font-size:1.5rem; color:#dc2626;">1</strong><br>Proher</div>
+                <div class="wf-stat-box"><strong style="font-size:1.5rem;">5</strong><br>Celkem</div>
+            </div>
+            <h4>📅 Nadcházející zápasy</h4>
+            <table class="wf-table">
+                <thead><tr><th>Datum</th><th>Tým</th><th>Soupeř</th><th>Místo</th><th>Skóre</th></tr></thead>
+                <tbody>
+                    <tr><td>23. 11. 2026</td><td>U13</td><td>SK Hronov U13</td><td>Náchod</td><td>[ D ] : [ H ] [✓]</td></tr>
+                </tbody>
+            </table>
+            <h4 style="margin-top:20px;">✅ Odehrané zápasy</h4>
+            <table class="wf-table">
+                <thead><tr><th>Datum</th><th>Tým</th><th>Soupeř</th><th>Výsledek</th></tr></thead>
+                <tbody>
+                    <tr style="border-left: 4px solid #16a34a;"><td>09. 11. 2026</td><td>U17</td><td>FK Dvůr Králové U17</td><td><strong>2:1</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
