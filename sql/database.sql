@@ -82,3 +82,10 @@ CREATE TABLE IF NOT EXISTS `treninky` (
     `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
+
+-- TESTOVACÍ DATA
+INSERT INTO `tymy` (`id`, `nazev`, `vekova_kategorie`, `rok_narozeni_od`, `rok_narozeni_do`) VALUES
+(1, 'FK Náchod U11', 'U11', 2015, 2016),
+(2, 'FK Náchod U13', 'U13', 2013, 2014),
+(3, 'FK Náchod U15', 'U15', 2011, 2012),
+(4, 'FK Náchod U17', 'U17', 2009, 2010);
