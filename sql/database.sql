@@ -68,3 +68,16 @@ CREATE TABLE `zapasy` (
     `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB;
+
+-- 6) Tréninky
+CREATE TABLE `treninky` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `tym_id` INT NOT NULL,
+    `datum` DATE NOT NULL,
+    `cas_od` TIME NOT NULL,
+    `cas_do` TIME NOT NULL,
+    `misto` VARCHAR(150) NOT NULL DEFAULT 'Hlavní hřiště FK Náchod',
+    `popis` TEXT DEFAULT NULL,
+    `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB;
