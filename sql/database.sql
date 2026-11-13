@@ -81,3 +81,10 @@ CREATE TABLE `treninky` (
     `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB;
+
+-- TESTOVACÍ DATA
+INSERT INTO `tymy` (`nazev`, `vekova_kategorie`, `rok_narozeni_od`, `rok_narozeni_do`) VALUES
+('FK Náchod U11', 'U11', 2015, 2016),
+('FK Náchod U13', 'U13', 2013, 2014),
+('FK Náchod U15', 'U15', 2011, 2012),
+('FK Náchod U17', 'U17', 2009, 2010);
