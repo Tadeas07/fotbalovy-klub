@@ -6,3 +6,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial
 .logo-nazev h1 { font-size: 1.5rem; }
 .navigace a { color: #ffffff; text-decoration: none; padding: 8px 14px; border-radius: 4px; }
 .navigace a:hover, .navigace a.aktivni { background-color: #f9a825; color: #0b3c70; }
+
+.tabulka { width: 100%; border-collapse: collapse; background-color: #ffffff; border: 1px solid #dee2e6; }
+.tabulka th { background-color: #0b3c70; color: #ffffff; padding: 10px 14px; text-align: left; }
+.tabulka td { padding: 10px 14px; border-bottom: 1px solid #e9ecef; }
+.tabulka tbody tr:hover { background-color: #f8f9fa; }
