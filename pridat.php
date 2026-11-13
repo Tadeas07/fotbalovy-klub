@@ -81,3 +81,4 @@ $tymy = $pdo->query("SELECT id, nazev, vekova_kategorie, rok_narozeni_od, rok_na
 
 
 
+
