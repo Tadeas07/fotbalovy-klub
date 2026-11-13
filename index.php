@@ -27,6 +27,7 @@ $hraci = $pdo->query("SELECT h.*, t.nazev AS tym_nazev, t.vekova_kategorie FROM 
         <?php endforeach; ?>
 <?php endif; ?>
     </table>
+<p>Celkem zobrazeno hráčů: <strong><?= count($hraci) ?></strong></p>
 </main>
 </body>
 </html>
@@ -52,6 +53,7 @@ $hraci = $pdo->query("SELECT h.*, t.nazev AS tym_nazev, t.vekova_kategorie FROM 
         <?php endforeach; ?>
 <?php endif; ?>
     </table>
+<p>Celkem zobrazeno hráčů: <strong><?= count($hraci) ?></strong></p>
 </main>
 </body>
 </html>
@@ -79,9 +81,11 @@ $tymy = $pdo->query("SELECT id, nazev, vekova_kategorie FROM tymy WHERE aktivni 
         <?php endforeach; ?>
 <?php endif; ?>
     </table>
+<p>Celkem zobrazeno hráčů: <strong><?= count($hraci) ?></strong></p>
 </main>
 </body>
 </html>
+
 
 
 
