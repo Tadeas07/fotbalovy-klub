@@ -101,3 +101,13 @@ INSERT INTO `tym_trener` (`tym_id`, `trener_id`, `role`) VALUES
 (2, 3, 'asistent'),
 (3, 1, 'hlavni'),
 (4, 4, 'hlavni');
+
+INSERT INTO `hraci` (`jmeno`, `prijmeni`, `datum_narozeni`, `pozice`, `tym_id`, `telefon_rodice`, `email_rodice`) VALUES
+('Lukáš', 'Malý', '2015-03-14', 'brankář', 1, '721000001', 'maly@email.cz'),
+('Adam', 'Veselý', '2015-07-22', 'obránce', 1, '721000002', 'vesely@email.cz'),
+('Jakub', 'Procházka', '2016-01-10', 'záložník', 1, '721000003', 'prochazka@email.cz'),
+('Filip', 'Kučera', '2015-11-05', 'útočník', 1, '721000004', 'kucera@email.cz'),
+('Daniel', 'Horák', '2013-05-18', 'brankář', 2, '722000001', 'horak@email.cz'),
+('Matyáš', 'Němec', '2014-02-28', 'obránce', 2, '722000002', 'nemec@email.cz'),
+('Ondřej', 'Marek', '2013-09-03', 'záložník', 2, '722000003', 'marek@email.cz'),
+('Vojtěch', 'Pospíšil', '2014-06-17', 'útočník', 2, '722000004', 'pospisil@email.cz');
