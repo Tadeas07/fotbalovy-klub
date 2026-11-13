@@ -27,3 +27,14 @@ CREATE TABLE IF NOT EXISTS `treneri` (
     `aktivni` TINYINT(1) NOT NULL DEFAULT 1,
     `vytvoreno` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
+
+-- 3. Vazební tabulka: přiřazení trenérů k týmům (vztah M:N)
+CREATE TABLE IF NOT EXISTS `tym_trener` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `tym_id` INT NOT NULL,
+    `trener_id` INT NOT NULL,
+    `role` ENUM('hlavni', 'asistent') NOT NULL DEFAULT 'asistent',
+    FOREIGN KEY (`tym_id`) REFERENCES `tymy`(`id`) ON DELETE CASCADE,
+    FOREIGN KEY (`trener_id`) REFERENCES `treneri`(`id`) ON DELETE CASCADE,
+    UNIQUE KEY `uq_tym_trener` (`tym_id`, `trener_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_czech_ci;
