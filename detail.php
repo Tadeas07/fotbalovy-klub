@@ -9,3 +9,4 @@ if ($id <= 0) { header('Location: index.php'); exit; }
 <body><header><h1>⚽ FK Náchod – Mládež</h1></header><main class="container"><h2><?= htmlspecialchars($hrac['prijmeni'] . ' ' . $hrac['jmeno']) ?></h2></main></body>
 </html>
 
+
