@@ -33,6 +33,7 @@ $hraci = $pdo->query("SELECT h.*, t.nazev AS tym_nazev FROM hraci h LEFT JOIN ty
                 <tr><td><?= htmlspecialchars($h['prijmeni']) ?></td><td><?= htmlspecialchars($h['jmeno']) ?></td></tr>
             <?php endforeach; ?>
         </table>
+        <p class="pocet">Celkem hráčů: <strong><?= count($hraci) ?></strong></p>
     </main>
 </body>
 </html>
@@ -58,6 +59,7 @@ $hraci = $pdo->query("SELECT h.*, t.nazev AS tym_nazev FROM hraci h LEFT JOIN ty
                 <tr><td><?= htmlspecialchars($h['prijmeni']) ?></td><td><?= htmlspecialchars($h['jmeno']) ?></td></tr>
             <?php endforeach; ?>
         </table>
+        <p class="pocet">Celkem hráčů: <strong><?= count($hraci) ?></strong></p>
     </main>
 </body>
 </html>
@@ -81,9 +83,11 @@ GET['tym'] : 0;
                 <tr><td><?= htmlspecialchars($h['prijmeni']) ?></td><td><?= htmlspecialchars($h['jmeno']) ?></td></tr>
             <?php endforeach; ?>
         </table>
+        <p class="pocet">Celkem hráčů: <strong><?= count($hraci) ?></strong></p>
     </main>
 </body>
 </html>
+
 
 
 
