@@ -120,3 +120,9 @@ INSERT INTO `hraci` (`jmeno`, `prijmeni`, `datum_narozeni`, `pozice`, `tym_id`, 
 ('David', 'Šťastný', '2012-08-12', 'obránce', 3, '723 000 002', 'stastny.rodic@email.cz'),
 ('Jan', 'Fiala', '2011-12-01', 'záložník', 3, '723 000 003', 'fiala.rodic@gmail.com'),
 ('Martin', 'Kratochvíl', '2012-03-30', 'útočník', 3, '723 000 004', 'kratochvil.rodic@seznam.cz');
+
+INSERT INTO `hraci` (`jmeno`, `prijmeni`, `datum_narozeni`, `pozice`, `tym_id`, `telefon_rodice`, `email_rodice`) VALUES
+('Petr', 'Sedláček', '2009-06-08', 'brankář', 4, '724 000 001', 'sedlacek.rodic@seznam.cz'),
+('Karel', 'Vlček', '2010-01-19', 'obránce', 4, '724 000 002', 'vlcek.rodic@email.cz'),
+('Štěpán', 'Kolář', '2009-10-27', 'záložník', 4, '724 000 003', 'kolar.rodic@gmail.com'),
+('Matěj', 'Dostál', '2010-05-14', 'útočník', 4, '724 000 004', 'dostal.rodic@seznam.cz');
