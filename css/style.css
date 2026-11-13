@@ -11,3 +11,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial
 .tabulka th { background-color: #0b3c70; color: #ffffff; padding: 10px 14px; text-align: left; }
 .tabulka td { padding: 10px 14px; border-bottom: 1px solid #e9ecef; }
 .tabulka tbody tr:hover { background-color: #f8f9fa; }
+
+.stitek { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+.post-brankář { background-color: #fff3cd; color: #856404; }
+.post-obránce { background-color: #d4edda; color: #155724; }
+.post-záložník { background-color: #d1ecf1; color: #0c5460; }
+.post-útočník { background-color: #f8d7da; color: #721c24; }
