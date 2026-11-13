@@ -1,2 +1,2 @@
 <?php
-if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) { $chyby[] = 'Špatný email'; }
+if (new DateTime($datum) > new DateTime()) { $chyby[] = 'Datum v budoucnosti'; }
