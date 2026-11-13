@@ -135,3 +135,4 @@ $zapasy = $pdo->query("SELECT z.*, t.nazev AS tym_nazev FROM zapasy z JOIN tymy 
 </main></body></html>
 
 
+
