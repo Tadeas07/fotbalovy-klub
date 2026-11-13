@@ -10,7 +10,7 @@ $hraci = $pdo->query("SELECT * FROM hraci WHERE aktivni = 1 ORDER BY prijmeni")-
 <main>
     <h2>Seznam hráčů</h2>
     <table>
-        <tr><th>Příjmení</th><th>Jméno</th><th>Datum narození</th></tr>
+        <tr><th>Příjmení</th><th>Jméno</th><th>Datum narození</th><th>Pozice</th></tr>
         <?php foreach ($hraci as $h): ?>
             <tr><td><?= htmlspecialchars($h['prijmeni']) ?></td><td><?= htmlspecialchars($h['jmeno']) ?></td></tr>
         <?php endforeach; ?>
@@ -18,4 +18,5 @@ $hraci = $pdo->query("SELECT * FROM hraci WHERE aktivni = 1 ORDER BY prijmeni")-
 </main>
 </body>
 </html>
+
 
