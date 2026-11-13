@@ -15,3 +15,4 @@ $hrac = $stmt->fetch();
 <p>Pozice: <?= htmlspecialchars($hrac['pozice']) ?></p>
 <p>Tým: <?= htmlspecialchars($hrac['tym_nazev'] ?? 'Bez týmu') ?></p></main></body></html>
 
+
