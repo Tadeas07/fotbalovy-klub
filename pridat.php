@@ -1,3 +1,2 @@
 <?php
-// Kontrola ročníku dle FAČR
-if ($rok < $rok_od || $rok > $rok_do) { $chyby[] = 'Špatná věková kategorie'; }
+$stmt = $pdo->prepare("INSERT INTO hraci (jmeno, prijmeni, datum_narozeni, pozice, tym_id, telefon_rodice, email_rodice, aktivni) VALUES (?, ?, ?, ?, ?, ?, ?, 1)");
