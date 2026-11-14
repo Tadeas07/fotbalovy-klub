@@ -353,3 +353,23 @@ h3 {
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
+.form-radek {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.form-radek .form-skupina {
+    flex: 1;
+    min-width: 220px;
+}
+
+.form-skupina {
+    margin-bottom: 15px;
+}
+
+.form-skupina label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
