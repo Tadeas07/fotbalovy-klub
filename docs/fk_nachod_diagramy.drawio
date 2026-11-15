@@ -1,0 +1,635 @@
+<mxfile host="app.diagrams.net" modified="2026-11-13T16:00:00.000Z" agent="Mozilla/5.0" version="24.0.0" type="device">
+  <!-- ========================================== -->
+  <!-- LIST 1: MAPA STRÁNEK A ARCHITEKTURA WEBU    -->
+  <!-- ========================================== -->
+  <diagram id="sitemap" name="1. Mapa stránek (Sitemap)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#f8fafc">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title1" value="FK Náchod - Informační architektura a mapa stránek" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle1" value="Struktura modulů pro maturitní projekt SPŠ ELIT Dobruška (stav k 13. 11. 2026)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="600" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Root Node: Header Navigation -->
+        <mxCell id="root_nav" value="&lt;b&gt;Globální navigace aplikace&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#cbd5e1&quot;&gt;Záhlaví webu (Header) s logem a menu&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=#07274a;fontColor=#ffffff;fontSize=14;arcSize=10;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="435" y="120" width="300" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Level 1 Nodes -->
+        <!-- 1. index.php -->
+        <mxCell id="node_index" value="&lt;b&gt;index.php&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803d&quot;&gt;&lt;b&gt;[ROZPRACOVÁNO]&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;hr&gt;Přehled všech hráčů z DB&lt;br&gt;Filtrace podle týmů (U11–U17)&lt;br&gt;Počítadlo zobrazených záznamů" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#16a34a;strokeWidth=2;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- 2. pridat.php -->
+        <mxCell id="node_pridat" value="&lt;b&gt;pridat.php&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803d&quot;&gt;&lt;b&gt;[ROZPRACOVÁNO]&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;hr&gt;Formulář registrace hráče&lt;br&gt;Serverová validace kontaktů&lt;br&gt;&lt;b&gt;Aplikační logika:&lt;/b&gt; kontrola ročníku" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#16a34a;strokeWidth=2;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="260" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- 3. zapasy.php -->
+        <mxCell id="node_zapasy" value="&lt;b&gt;zapasy.php&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#b45309&quot;&gt;&lt;b&gt;[PLÁNOVÁNO DO ETAPY 2]&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;hr&gt;Rozpis mistrovských utkání&lt;br&gt;Zadávání výsledků&lt;br&gt;&lt;b&gt;Logika:&lt;/b&gt; zákaz zadat budoucí skóre" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f59e0b;strokeWidth=2;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="260" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- 4. treninky.php -->
+        <mxCell id="node_treninky" value="&lt;b&gt;treninky.php&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#b45309&quot;&gt;&lt;b&gt;[PLÁNOVÁNO DO ETAPY 2]&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;hr&gt;Týdenní harmonogram tréninků&lt;br&gt;Rozpis hřišť a časů&lt;br&gt;&lt;b&gt;Logika:&lt;/b&gt; detekce kolize hřiště" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f59e0b;strokeWidth=2;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="260" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- Level 2 Node: detail.php -->
+        <mxCell id="node_detail" value="&lt;b&gt;detail.php?id=X&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803d&quot;&gt;&lt;b&gt;[ROZPRACOVÁNO]&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;hr&gt;Detailní karta hráče z DB&lt;br&gt;Vypočtený věk z data narození&lt;br&gt;Zákonný zástupce (telefon, e-mail)&lt;br&gt;Seznam spoluhráčů z týmu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#16a34a;strokeWidth=2;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="220" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Level 2 Node: Logika validace -->
+        <mxCell id="node_logika_info" value="&lt;b&gt;Validace věku v PHP&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0b3c70&quot;&gt;&lt;b&gt;[KONTROLNÍ MECHANISMUS]&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;hr&gt;rok_od &amp;lt;= ročník &amp;lt;= rok_do&lt;br&gt;Chybová hláška při porušení&lt;br&gt;Úspěšné uložení do MySQL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="440" width="220" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors from root -->
+        <mxCell id="edge1" edge="1" source="root_nav" target="node_index" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0b3c70;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" source="root_nav" target="node_pridat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0b3c70;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" source="root_nav" target="node_zapasy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;dashed=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" source="root_nav" target="node_treninky" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;dashed=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors to level 2 -->
+        <mxCell id="edge5" edge="1" source="node_index" target="node_detail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" source="node_pridat" target="node_logika_info" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Database node -->
+        <mxCell id="db_node" value="&lt;b&gt;MySQL Databáze fk_nachod&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;6 relačních tabulek (tymy, hraci, treneri, ...)&lt;br&gt;db.php (PDO spojení)&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e2e8f0;strokeColor=#475569;strokeWidth=2;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="450" y="620" width="270" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_db1" edge="1" source="node_detail" target="db_node" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1;dashed=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge_db2" edge="1" source="node_logika_info" target="db_node" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=1;dashed=1;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ========================================== -->
+  <!-- LIST 2: ER DIAGRAM DATABÁZE (6 TABULEK)    -->
+  <!-- ========================================== -->
+  <diagram id="er_model" name="2. ER diagram databáze (MySQL)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#f8fafc">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title2" value="FK Náchod - Relační databázový model (ER diagram)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle2" value="6 normalizovaných tabulek s cizími klíči a referenční integritou InnoDB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="600" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- TABLE 1: tymy -->
+        <mxCell id="tbl_tymy" value="&lt;b&gt;tymy&lt;/b&gt; (kategorie)&lt;br&gt;&lt;hr&gt;&lt;b&gt;id&lt;/b&gt; : INT [PK, AI]&lt;br&gt;nazev : VARCHAR(100)&lt;br&gt;vekova_kategorie : VARCHAR(10)&lt;br&gt;&lt;b&gt;rok_narozeni_od&lt;/b&gt; : INT&lt;br&gt;&lt;b&gt;rok_narozeni_do&lt;/b&gt; : INT&lt;br&gt;aktivni : TINYINT(1)&lt;br&gt;vytvoreno : DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0b3c70;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="120" width="220" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- TABLE 2: hraci -->
+        <mxCell id="tbl_hraci" value="&lt;b&gt;hraci&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;id&lt;/b&gt; : INT [PK, AI]&lt;br&gt;jmeno : VARCHAR(50)&lt;br&gt;prijmeni : VARCHAR(50)&lt;br&gt;&lt;b&gt;datum_narozeni&lt;/b&gt; : DATE&lt;br&gt;pozice : ENUM(...)&lt;br&gt;&lt;font color=&quot;#0284c7&quot;&gt;&lt;b&gt;tym_id&lt;/b&gt; : INT [FK]&lt;/font&gt;&lt;br&gt;telefon_rodice : VARCHAR(20)&lt;br&gt;email_rodice : VARCHAR(100)&lt;br&gt;aktivni : TINYINT(1)&lt;br&gt;vytvoreno : DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="240" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- TABLE 3: treneri -->
+        <mxCell id="tbl_treneri" value="&lt;b&gt;treneri&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;id&lt;/b&gt; : INT [PK, AI]&lt;br&gt;jmeno : VARCHAR(50)&lt;br&gt;prijmeni : VARCHAR(50)&lt;br&gt;telefon : VARCHAR(20)&lt;br&gt;email : VARCHAR(100)&lt;br&gt;licence : ENUM(...)&lt;br&gt;aktivni : TINYINT(1)&lt;br&gt;vytvoreno : DATETIME" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0b3c70;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="380" width="210" height="170" as="geometry" />
+        </mxCell>
+
+        <!-- TABLE 4: tym_trener (M:N) -->
+        <mxCell id="tbl_tym_trener" value="&lt;b&gt;tym_trener&lt;/b&gt; (vazba M:N)&lt;br&gt;&lt;hr&gt;&lt;b&gt;id&lt;/b&gt; : INT [PK, AI]&lt;br&gt;&lt;font color=&quot;#0284c7&quot;&gt;&lt;b&gt;tym_id&lt;/b&gt; : INT [FK]&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#0284c7&quot;&gt;&lt;b&gt;trener_id&lt;/b&gt; : INT [FK]&lt;/font&gt;&lt;br&gt;role : ENUM('hlavni', 'asistent')" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#475569;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="150" width="210" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- TABLE 5: zapasy -->
+        <mxCell id="tbl_zapasy" value="&lt;b&gt;zapasy&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;id&lt;/b&gt; : INT [PK, AI]&lt;br&gt;&lt;font color=&quot;#0284c7&quot;&gt;&lt;b&gt;tym_id&lt;/b&gt; : INT [FK]&lt;/font&gt;&lt;br&gt;souper : VARCHAR(100)&lt;br&gt;datum : DATE&lt;br&gt;cas : TIME&lt;br&gt;misto : VARCHAR(150)&lt;br&gt;typ : ENUM('domácí', 'venkovní')&lt;br&gt;skore_domaci : INT&lt;br&gt;skore_hoste : INT&lt;br&gt;poznamka : TEXT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f59e0b;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="380" width="220" height="210" as="geometry" />
+        </mxCell>
+
+        <!-- TABLE 6: treninky -->
+        <mxCell id="tbl_treninky" value="&lt;b&gt;treninky&lt;/b&gt;&lt;br&gt;&lt;hr&gt;&lt;b&gt;id&lt;/b&gt; : INT [PK, AI]&lt;br&gt;&lt;font color=&quot;#0284c7&quot;&gt;&lt;b&gt;tym_id&lt;/b&gt; : INT [FK]&lt;/font&gt;&lt;br&gt;den_v_tydnu : ENUM(...)&lt;br&gt;cas_od : TIME&lt;br&gt;cas_do : TIME&lt;br&gt;hriste : VARCHAR(100)&lt;br&gt;poznamka : VARCHAR(255)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#f59e0b;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="210" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Relations / Foreign Keys -->
+        <!-- tymy 1 : N hraci -->
+        <mxCell id="rel1" edge="1" source="tbl_tymy" target="tbl_hraci" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0284c7;strokeWidth=2;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1_label" value="1 : N&lt;br&gt;(ON DELETE SET NULL)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#0284c7;backgroundColor=#ffffff;" vertex="1" connectable="0" parent="rel1">
+          <mxGeometry x="-0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- tymy 1 : N tym_trener -->
+        <mxCell id="rel2" edge="1" source="tbl_tymy" target="tbl_tym_trener" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2_label" value="1 : N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#475569;backgroundColor=#ffffff;" vertex="1" connectable="0" parent="rel2">
+          <mxGeometry x="0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- treneri 1 : N tym_trener -->
+        <mxCell id="rel3" edge="1" source="tbl_treneri" target="tbl_tym_trener" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3_label" value="1 : N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#475569;backgroundColor=#ffffff;" vertex="1" connectable="0" parent="rel3">
+          <mxGeometry x="0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- tymy 1 : N zapasy -->
+        <mxCell id="rel4" edge="1" source="tbl_tymy" target="tbl_zapasy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f59e0b;strokeWidth=2;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4_label" value="1 : N (CASCADE)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#f59e0b;backgroundColor=#ffffff;" vertex="1" connectable="0" parent="rel4">
+          <mxGeometry x="0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- tymy 1 : N treninky -->
+        <mxCell id="rel5" edge="1" source="tbl_tymy" target="tbl_treninky" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#f59e0b;strokeWidth=2;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5_label" value="1 : N (CASCADE)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#f59e0b;backgroundColor=#ffffff;" vertex="1" connectable="0" parent="rel5">
+          <mxGeometry x="0.1" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ========================================== -->
+  <!-- LIST 3: WIREFRAME - PŘEHLED HRÁČŮ          -->
+  <!-- ========================================== -->
+  <diagram id="wf_index" name="3. Wireframe - Přehled (index.php)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#f8fafc">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Browser Window Wrapper -->
+        <mxCell id="browser1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;strokeWidth=2;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="740" as="geometry" />
+        </mxCell>
+        <!-- Browser header dots -->
+        <mxCell id="b_dots" value="● ● ●   http://localhost/fotbalovy-klub/index.php" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e2e8f0;strokeColor=none;align=left;spacingLeft=15;fontSize=12;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- App Header -->
+        <mxCell id="hdr1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1080" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="logo_txt" value="&lt;b&gt;FK Náchod - Mládež&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#cbd5e1&quot;&gt;Informační systém pro správu mládežnických kategorií&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_btn1" value="Seznam hráčů" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=none;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="88" width="110" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_btn2" value="+ Přidat hráče" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9a825;strokeColor=none;fontColor=#000000;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="905" y="88" width="115" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- Page Subheader -->
+        <mxCell id="page_title" value="Seznam aktivních hráčů" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="badge_count" value="Zobrazeno celkem: 8 hráčů" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e2e8f0;strokeColor=#cbd5e1;fontSize=11;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="380" y="165" width="170" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Filter Bar -->
+        <mxCell id="filter_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#cbd5e1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="210" width="1000" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="filter_lbl" value="Filtrovat kategorii:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#475569;" vertex="1" parent="1">
+          <mxGeometry x="95" y="222" width="120" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="flt_all" value="Všechny týmy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="222" width="100" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="flt_u11" value="U11 (2015-2016)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#334155;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="222" width="115" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="flt_u13" value="U13 (2013-2014)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#334155;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="455" y="222" width="115" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="flt_u15" value="U15 (2011-2012)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#334155;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="580" y="222" width="115" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="flt_u17" value="U17 (2009-2010)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;fontColor=#334155;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="705" y="222" width="115" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- Table Header -->
+        <mxCell id="th_bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="1000" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="th1" value="&lt;b&gt;#&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="85" y="280" width="40" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="th2" value="&lt;b&gt;Příjmení a jméno&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="140" y="280" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="th3" value="&lt;b&gt;Datum narození&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="340" y="280" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="th4" value="&lt;b&gt;Věk&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="280" width="60" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="th5" value="&lt;b&gt;Pozice&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="560" y="280" width="100" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="th6" value="&lt;b&gt;Tým (kategorie)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="680" y="280" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="th7" value="&lt;b&gt;Akce&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#ffffff;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="960" y="280" width="110" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Table Row 1 -->
+        <mxCell id="r1_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e2e8f0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="315" width="1000" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_c1" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="85" y="315" width="40" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_c2" value="&lt;b&gt;Novotný&lt;/b&gt; Tomáš" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="140" y="315" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_c3" value="12. 03. 2012" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="340" y="315" width="120" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_c4" value="14 let" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="480" y="315" width="60" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_c5" value="útočník" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#ef4444;fontColor=#991b1b;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="575" y="323" width="70" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_c6" value="FK Náchod U15" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#0284c7;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="315" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_c7" value="Detail hráče →" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0284c7;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="323" width="100" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Table Row 2 -->
+        <mxCell id="r2_bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="357" width="1000" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_c1" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="85" y="357" width="40" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_c2" value="&lt;b&gt;Dvořák&lt;/b&gt; Jakub" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="140" y="357" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_c3" value="05. 08. 2011" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="340" y="357" width="120" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_c4" value="15 let" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="480" y="357" width="60" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_c5" value="záložník" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontColor=#075985;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="575" y="365" width="70" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_c6" value="FK Náchod U15" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontColor=#0284c7;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="357" width="180" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_c7" value="Detail hráče →" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0284c7;strokeColor=none;fontColor=#ffffff;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="965" y="365" width="100" height="24" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ========================================== -->
+  <!-- LIST 4: WIREFRAME - DETAIL HRÁČE           -->
+  <!-- ========================================== -->
+  <diagram id="wf_detail" name="4. Wireframe - Detail (detail.php)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#f8fafc">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Browser Window Wrapper -->
+        <mxCell id="browser_d" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;strokeWidth=2;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="b_dots_d" value="● ● ●   http://localhost/fotbalovy-klub/detail.php?id=1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e2e8f0;strokeColor=none;align=left;spacingLeft=15;fontSize=12;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- App Header -->
+        <mxCell id="hdr_d" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1080" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="logo_txt_d" value="&lt;b&gt;FK Náchod - Mládež&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#cbd5e1&quot;&gt;Informační systém pro správu mládežnických kategorií&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Back Button -->
+        <mxCell id="btn_back_d" value="← Zpět na seznam hráčů" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;fontColor=#334155;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="180" height="32" as="geometry" />
+        </mxCell>
+
+        <!-- Left Column: Player Profile Card -->
+        <mxCell id="card_profile" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="210" width="480" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr_profile" value="&lt;b&gt;Osobní karta hráče #1&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;fontColor=#ffffff;fontSize=14;align=left;spacingLeft=15;" vertex="1" parent="1">
+          <mxGeometry x="80" y="210" width="480" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p_avatar" value="FOTO / AVATAR" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;fontSize=12;fontColor=#94a3b8;" vertex="1" parent="1">
+          <mxGeometry x="110" y="270" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p_name" value="&lt;b&gt;Tomáš Novotný&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803d&quot;&gt;● Aktivní hráč klubu&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="230" y="275" width="300" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p_pos_badge" value="útočník" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#ef4444;fontColor=#991b1b;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="330" width="80" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Profile Details -->
+        <mxCell id="p_det_title" value="&lt;b&gt;Základní údaje:&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="110" y="390" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p_det_box" value="&lt;table width=&quot;100%&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Datum narození:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;12. 03. 2012&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Vypočtený věk:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;14 let (přes DateTime::diff)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Kategorie:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;font color=&quot;#0284c7&quot;&gt;&lt;b&gt;FK Náchod U15&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Ročníkové rozmezí:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;2011 – 2012 (odpovídá logice)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="420" width="420" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- Contact Box -->
+        <mxCell id="p_con_title" value="&lt;b&gt;Zákonný zástupce (rodič):&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=13;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="110" y="530" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p_con_box" value="&lt;table width=&quot;100%&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Telefon:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;+420 777 123 456&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;E-mail:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;petr.novotny@seznam.cz&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="560" width="420" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Right Column: Teammates List -->
+        <mxCell id="card_team" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="210" width="480" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="hdr_team" value="&lt;b&gt;Spoluhráči ze stejného týmu (FK Náchod U15)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0284c7;strokeColor=none;fontColor=#ffffff;fontSize=14;align=left;spacingLeft=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="210" width="480" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Teammate Item 1 -->
+        <mxCell id="tm1" value="&lt;b&gt;Jakub Dvořák&lt;/b&gt; (15 let) — záložník&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;nar. 05. 08. 2011 | tel: 777 222 333&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;align=left;spacingLeft=15;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="625" y="270" width="430" height="60" as="geometry" />
+        </mxCell>
+        <!-- Teammate Item 2 -->
+        <mxCell id="tm2" value="&lt;b&gt;David Horák&lt;/b&gt; (14 let) — brankář&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;nar. 22. 11. 2012 | tel: 777 888 999&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;align=left;spacingLeft=15;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="625" y="345" width="430" height="60" as="geometry" />
+        </mxCell>
+        <!-- Teammate Item 3 -->
+        <mxCell id="tm3" value="&lt;b&gt;Matěj Veselý&lt;/b&gt; (14 let) — obránce&lt;br&gt;&lt;font color=&quot;#64748b&quot;&gt;nar. 09. 04. 2012 | tel: 602 111 222&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#e2e8f0;align=left;spacingLeft=15;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="625" y="420" width="430" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Teammate note -->
+        <mxCell id="tm_note" value="&lt;font color=&quot;#64748b&quot;&gt;Tento dynamický seznam je v PHP načítán z DB dotazem:&lt;br&gt;&lt;code&gt;SELECT * FROM hraci WHERE tym_id = :tym_id AND id != :id&lt;/code&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;align=center;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="625" y="500" width="430" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ========================================== -->
+  <!-- LIST 5: WIREFRAME - FORMULÁŘ (pridat.php)  -->
+  <!-- ========================================== -->
+  <diagram id="wf_pridat" name="5. Wireframe - Formulář (pridat.php)">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#f8fafc">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Browser Window Wrapper -->
+        <mxCell id="browser4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;strokeWidth=2;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="b_dots4" value="● ● ●   http://localhost/fotbalovy-klub/pridat.php" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e2e8f0;strokeColor=none;align=left;spacingLeft=15;fontSize=12;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- App Header -->
+        <mxCell id="hdr4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1080" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="logo_txt4" value="&lt;b&gt;FK Náchod - Mládež&lt;/b&gt;&lt;br&gt;&lt;font size=&quot;1&quot; color=&quot;#cbd5e1&quot;&gt;Informační systém pro správu mládežnických kategorií&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="400" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Back Button -->
+        <mxCell id="btn_back4" value="← Zpět na seznam hráčů" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f5f9;strokeColor=#cbd5e1;fontColor=#334155;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="180" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="f_title" value="Registrace nového hráče" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Form Card Container -->
+        <mxCell id="form_card" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="700" height="480" as="geometry" />
+        </mxCell>
+
+        <!-- Inputs -->
+        <mxCell id="lbl_jmeno" value="&lt;b&gt;Jméno hráče: *&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="260" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inp_jmeno" value="např. Jan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;align=left;spacingLeft=10;fontSize=12;fontColor=#94a3b8;" vertex="1" parent="1">
+          <mxGeometry x="110" y="285" width="290" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl_prijmeni" value="&lt;b&gt;Příjmení hráče: *&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="440" y="260" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inp_prijmeni" value="např. Novák" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;align=left;spacingLeft=10;fontSize=12;fontColor=#94a3b8;" vertex="1" parent="1">
+          <mxGeometry x="440" y="285" width="300" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl_dn" value="&lt;b&gt;Datum narození: *&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="335" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inp_dn" value="2013-05-18" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="360" width="290" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl_pozice" value="&lt;b&gt;Herní pozice: *&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="440" y="335" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inp_pozice" value="Záložník  ▼" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="440" y="360" width="300" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- Business Logic Field: Team -->
+        <mxCell id="lbl_tym" value="&lt;b&gt;Tým (věková kategorie): *&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="415" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inp_tym" value="FK Náchod U13 (kategorie U13, ročníky 2013 - 2014)   ▼" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;align=left;spacingLeft=10;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="440" width="630" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="hint_tym" value="&lt;font color=&quot;#b45309&quot;&gt;&lt;b&gt;Aplikační logika:&lt;/b&gt; Systém kontroluje zda rok narození spadá do limitu týmu.&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="110" y="475" width="600" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Contacts -->
+        <mxCell id="lbl_tel" value="Telefon na zákonného zástupce:" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="110" y="505" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inp_tel" value="např. 603 123 456" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;align=left;spacingLeft=10;fontSize=12;fontColor=#94a3b8;" vertex="1" parent="1">
+          <mxGeometry x="110" y="530" width="290" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lbl_mail" value="E-mail na zákonného zástupce:" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="440" y="505" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="inp_mail" value="např. rodic@seznam.cz" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;align=left;spacingLeft=10;fontSize=12;fontColor=#94a3b8;" vertex="1" parent="1">
+          <mxGeometry x="440" y="530" width="300" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- Submit Button -->
+        <mxCell id="btn_submit" value="Uložit hráče do databáze" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;fontColor=#ffffff;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="610" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_cancel" value="Zrušit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#64748b;strokeColor=none;fontColor=#ffffff;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="325" y="610" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <!-- ========================================== -->
+  <!-- LIST 6: WIREFRAME & APLIKAČNÍ LOGIKA        -->
+  <!-- ========================================== -->
+  <diagram id="wf_logika" name="6. Aplikační logika - Proces validace">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#f8fafc">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title_l" value="Procesní diagram aplikační logiky: Kontrola ročníku hráče" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="700" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle_l" value="Pravidlo 1: Zákaz zařazení hráče do věkové kategorie mimo povolené ročníky (pridat.php)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#64748b;" vertex="1" parent="1">
+          <mxGeometry x="40" y="65" width="700" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- Flowchart Block 1: Start -->
+        <mxCell id="fl_start" value="&lt;b&gt;START&lt;/b&gt;&lt;br&gt;Odeslání formuláře (POST)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=#07274a;fontColor=#ffffff;fontSize=12;arcSize=50;" vertex="1" parent="1">
+          <mxGeometry x="80" y="130" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Flowchart Block 2: Parse Year -->
+        <mxCell id="fl_step1" value="&lt;b&gt;Extrakce roku narození&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;$rok = date('Y', strtotime($datum))&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;strokeWidth=2;fontSize=12;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="310" y="125" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Flowchart Block 3: DB Query -->
+        <mxCell id="fl_step2" value="&lt;b&gt;Dotaz do DB na meze týmu&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#0284c7&quot;&gt;SELECT rok_narozeni_od, rok_narozeni_do&lt;br&gt;FROM tymy WHERE id = ?&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#0284c7;strokeWidth=2;fontSize=11;fontColor=#1e293b;" vertex="1" parent="1">
+          <mxGeometry x="580" y="125" width="230" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Flowchart Block 4: Decision (Diamond) -->
+        <mxCell id="fl_decide" value="&lt;b&gt;Spadá ročník do limitu?&lt;/b&gt;&lt;br&gt;rok_od &amp;lt;= $rok &amp;lt;= rok_do" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;strokeWidth=2;fontSize=12;fontColor=#92400e;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="870" y="105" width="220" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Decision YES: Insert DB -->
+        <mxCell id="fl_yes" value="&lt;b&gt;LOGIKA SPLNĚNA (ANO)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Provedení INSERT INTO hraci&lt;br&gt;PDO Prepared Statement&lt;br&gt;Přesměrování na index.php s úspěchem" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fdf4;strokeColor=#16a34a;strokeWidth=2;fontSize=12;fontColor=#14532d;" vertex="1" parent="1">
+          <mxGeometry x="860" y="270" width="240" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Decision NO: Error Alert -->
+        <mxCell id="fl_no" value="&lt;b&gt;PORUŠENÍ LOGIKY (NE)&lt;/b&gt;&lt;br&gt;&lt;hr&gt;Zastavení zpracování formuláře&lt;br&gt;Vygenerování validační chyby&lt;br&gt;Zachování zadaných údajů ve formuláři" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=2;fontSize=12;fontColor=#7f1d1d;" vertex="1" parent="1">
+          <mxGeometry x="580" y="270" width="230" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Edges in Flowchart -->
+        <mxCell id="fl_e1" edge="1" source="fl_start" target="fl_step1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0b3c70;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl_e2" edge="1" source="fl_step1" target="fl_step2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0b3c70;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl_e3" edge="1" source="fl_step2" target="fl_decide" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0b3c70;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Decision edges -->
+        <mxCell id="fl_e_yes" edge="1" source="fl_decide" target="fl_yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#16a34a;strokeWidth=2;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl_e_yes_lbl" value="ANO" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#16a34a;fontStyle=1;backgroundColor=#ffffff;" vertex="1" connectable="0" parent="fl_e_yes">
+          <mxGeometry x="-0.2" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="fl_e_no" edge="1" source="fl_decide" target="fl_no" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#dc2626;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl_e_no_lbl" value="NE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontColor=#dc2626;fontStyle=1;backgroundColor=#ffffff;" vertex="1" connectable="0" parent="fl_e_no">
+          <mxGeometry x="-0.2" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+
+        <!-- Lower section: Wireframe of Error State -->
+        <mxCell id="err_wireframe_title" value="&lt;b&gt;Wireframe rozhraní při porušení validačního pravidla (chybový stav):&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=14;fontColor=#0b3c70;" vertex="1" parent="1">
+          <mxGeometry x="80" y="390" width="600" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Error Alert Banner -->
+        <mxCell id="err_alert" value="&lt;b&gt;Chyba validace:&lt;/b&gt; Hráč narozený v roce &lt;b&gt;2010&lt;/b&gt; nemůže být zařazen do týmu &lt;b&gt;FK Náchod U13&lt;/b&gt;! Tato kategorie je určena pouze pro ročníky &lt;b&gt;2013 až 2014&lt;/b&gt;." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#ef4444;strokeWidth=2;fontColor=#991b1b;fontSize=12;align=left;spacingLeft=15;" vertex="1" parent="1">
+          <mxGeometry x="80" y="425" width="1020" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Form snippet with highlighted input -->
+        <mxCell id="err_box_snippet" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cbd5e1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="495" width="1020" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="err_f1_lbl" value="Datum narození:" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="110" y="520" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="err_f1_inp" value="2010-04-15  (ročník 2010)  ⚠" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#991b1b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="545" width="350" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="err_f2_lbl" value="Zvolený tým:" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#334155;" vertex="1" parent="1">
+          <mxGeometry x="500" y="520" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="err_f2_inp" value="FK Náchod U13 (povolené ročníky 2013 - 2014)  ⚠" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef2f2;strokeColor=#dc2626;strokeWidth=2;align=left;spacingLeft=10;fontSize=12;fontColor=#991b1b;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="545" width="560" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="err_f_hint" value="Formulář nepovolí zápis nekonzistentních dat do databáze a navrhne správnou kategorii (v tomto případě např. U17)." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#64748b;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="110" y="600" width="800" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="err_f_btn" value="Opravit údaje a zkontrolovat znovu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b3c70;strokeColor=none;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="640" width="240" height="38" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
