@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="1200" height="650">
+    <defs>
+        <style>
+            .bg { fill: #f8fafc; }
+            .h2-title { fill: #0b3c70; font-family: 'Segoe UI', Arial, sans-serif; font-size: 24px; font-weight: bold; }
+            .sub-text { fill: #64748b; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+            .node-root { fill: #0b3c70; stroke: #1e3a8a; rx: 8; }
+            .node-root-text { fill: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+            .node-done { fill: #ffffff; stroke: #16a34a; stroke-width: 2; rx: 6; }
+            .node-planned { fill: #ffffff; stroke: #f59e0b; stroke-width: 2; rx: 6; }
+            .node-sub { fill: #ffffff; stroke: #0284c7; stroke-width: 2; rx: 6; }
+            .node-title { fill: #0f172a; font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle; }
+            .node-desc { fill: #64748b; font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; text-anchor: middle; }
+            .badge-done { fill: #dcfce7; rx: 3; }
+            .badge-done-text { fill: #15803d; font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; font-weight: bold; text-anchor: middle; }
+            .badge-planned { fill: #fef3c7; rx: 3; }
+            .badge-planned-text { fill: #b45309; font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; font-weight: bold; text-anchor: middle; }
+            .connector { stroke: #94a3b8; stroke-width: 2; fill: none; }
+            .connector-dashed { stroke: #94a3b8; stroke-width: 2; stroke-dasharray: 4,4; fill: none; }
+        </style>
+    </defs>
+
+    <rect width="1200" height="650" class="bg" />
+
+    <g transform="translate(60, 40)">
+        <text x="0" y="25" class="h2-title">Informační architektura a mapa stránek (Sitemap)</text>
+        <text x="0" y="48" class="sub-text">Struktura navigace a provázanosti jednotlivých modulů pro maturitní projekt FK Náchod</text>
+    </g>
+
+    <!-- Connectors -->
+    <!-- Root to Level 1 -->
+    <path d="M 600, 160 L 600, 210" class="connector" />
+    <path d="M 190, 210 L 1010, 210" class="connector" />
+    <path d="M 190, 210 L 190, 250" class="connector" />
+    <path d="M 460, 210 L 460, 250" class="connector" />
+    <path d="M 740, 210 L 740, 250" class="connector" />
+    <path d="M 1010, 210 L 1010, 250" class="connector" />
+
+    <!-- Level 1 (Index) to Detail -->
+    <path d="M 190, 360 L 190, 450" class="connector" />
+
+    <!-- Root Node -->
+    <g transform="translate(470, 100)">
+        <rect width="260" height="60" class="node-root" />
+        <text x="130" y="28" class="node-root-text">Globální navigace</text>
+        <text x="130" y="47" fill="#94a3b8" font-family="'Segoe UI', Arial, sans-serif" font-size="12px" text-anchor="middle">Záhlaví aplikace (Header)</text>
+    </g>
+
+    <!-- Branch 1: index.php -->
+    <g transform="translate(75, 250)">
+        <rect width="230" height="110" class="node-done" />
+        <rect x="15" y="12" width="70" height="18" class="badge-done" />
+        <text x="50" y="25" class="badge-done-text">HOTOVO</text>
+        <text x="115" y="55" class="node-title">index.php</text>
+        <text x="115" y="75" class="node-desc">Seznam hráčů + filtr kategorií</text>
+        <text x="115" y="92" class="node-desc">Počítadlo a přehledová tabulka</text>
+    </g>
+
+    <!-- Branch 2: pridat.php -->
+    <g transform="translate(345, 250)">
+        <rect width="230" height="110" class="node-done" />
+        <rect x="15" y="12" width="70" height="18" class="badge-done" />
+        <text x="50" y="25" class="badge-done-text">HOTOVO</text>
+        <text x="115" y="55" class="node-title">pridat.php</text>
+        <text x="115" y="75" class="node-desc">Registrace nového hráče</text>
+        <text x="115" y="92" class="node-desc">Validace a kontrola věku FAČR</text>
+    </g>
+
+    <!-- Branch 3: zapasy.php -->
+    <g transform="translate(625, 250)">
+        <rect width="230" height="110" class="node-planned" />
+        <rect x="15" y="12" width="70" height="18" class="badge-planned" />
+        <text x="50" y="25" class="badge-planned-text">ETAPA 2</text>
+        <text x="115" y="55" class="node-title">zapasy.php</text>
+        <text x="115" y="75" class="node-desc">Rozpis a výsledky zápasů</text>
+        <text x="115" y="92" class="node-desc">Logika uzamčení budoucích dat</text>
+    </g>
+
+    <!-- Branch 4: treninky.php -->
+    <g transform="translate(895, 250)">
+        <rect width="230" height="110" class="node-planned" />
+        <rect x="15" y="12" width="70" height="18" class="badge-planned" />
+        <text x="50" y="25" class="badge-planned-text">ETAPA 2</text>
+        <text x="115" y="55" class="node-title">treninky.php</text>
+        <text x="115" y="75" class="node-desc">Rozvrh tréninkových jednotek</text>
+        <text x="115" y="92" class="node-desc">Časy a tréninková místa</text>
+    </g>
+
+    <!-- Sub-branch: detail.php -->
+    <g transform="translate(75, 450)">
+        <rect width="230" height="110" class="node-sub" />
+        <rect x="15" y="12" width="70" height="18" class="badge-done" />
+        <text x="50" y="25" class="badge-done-text">HOTOVO</text>
+        <text x="115" y="55" class="node-title">detail.php?id=X</text>
+        <text x="115" y="75" class="node-desc">Karta hráče + výpočet věku</text>
+        <text x="115" y="92" class="node-desc">Výpis spoluhráčů z týmu</text>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(470, 500)">
+        <text x="0" y="15" fill="#334155" font-family="'Segoe UI', Arial, sans-serif" font-size="12px" font-weight="bold">Legenda mapy stránek:</text>
+        
+        <rect x="0" y="28" width="12" height="12" fill="#16a34a" rx="2" />
+        <text x="20" y="39" fill="#475569" font-family="'Segoe UI', Arial, sans-serif" font-size="12px">Rozpracovaná funkční část (k 13. 11.)</text>
+
+        <rect x="250" y="28" width="12" height="12" fill="#f59e0b" rx="2" />
+        <text x="270" y="39" fill="#475569" font-family="'Segoe UI', Arial, sans-serif" font-size="12px">Navržená část pro navazující etapu</text>
+    </g>
+
+</svg>
