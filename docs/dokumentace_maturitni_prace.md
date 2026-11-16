@@ -158,3 +158,48 @@ V minulosti bylo v PHP běžné využívat procedurální funkce `mysql_*` (odst
 ---
 
 ## 4. Bezpečnost webových aplikací dle standardů OWASP
+
+Bezpečnost byla jednou z hlavních priorit při návrhu systému. Aplikace reflektuje doporučení mezinárodního bezpečnostního konsorcia **OWASP (Open Web Application Security Project)** a implementuje ochranu proti nejčastějším vektorům útoků.
+
+### 4.1 Prevence SQL Injection
+SQL Injection (SQLi) patří historicky k nejnebezpečnějším zranitelnostem. Nastává v situaci, kdy jsou uživatelské vstupy přímo vkládány nebo konkatenovány (spojovány tečkou) do textu SQL dotazu. Útočník může zadáním speciálních znaků (např. `' OR '1'='1`) změnit sémantiku dotazu a získat neoprávněný přístup k datům či celou databázi zničit.
+
+**Obrana v aplikaci FK Náchod:** V celém projektu se striktně využívají **parametrizované dotazy (prepared statements)**. Příklad bezpečné implementace filtrace:
+```php
+// Bezpečný dotaz s pozičním zástupným symbolem (?)
+$sql = "SELECT * FROM hraci WHERE tym_id = ? AND aktivni = 1";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$filtr_tym]);
+$hraci = $stmt->fetchAll();
+```
+V tomto případě je struktura SQL příkazu nejprve zkompilována databázovým enginem a hodnota parametru je předána odděleně v binární podobě. I kdyby parametr obsahoval škodlivý SQL kód, databáze s ním zachází výhradně jako s literálem (prostým textem) a k injektáži kódu nemůže dojít.
+
+### 4.2 Prevence Cross-Site Scripting (XSS)
+Útok typu XSS spočívá ve vložení škodlivého klientského skriptu (JavaScriptu) do webové stránky, který je následně spuštěn v prohlížeči jiného nicnetušícího uživatele. To může vést ke krádeži session cookies, přesměrování na podvodné stránky nebo manipulaci s obsahem webu.
+
+**Obrana v aplikaci:** Veškerý dynamický obsah načtený z databáze nebo od uživatele je při renderování do HTML šablony důsledně ošetřován funkcí `htmlspecialchars()` s nastaveným kódováním UTF-8:
+```php
+<td><?= htmlspecialchars($hrac['prijmeni'], ENT_QUOTES, 'UTF-8') ?></td>
+```
+Tato funkce převede nebezpečné HTML znaky (`<`, `>`, `&`, `"`, `'`) na jejich neškodné HTML entity (`&lt;`, `&gt;`, `&amp;`, `&quot;`, `&#039;`), čímž zamezí prohlížeči interpretovat text jako spustitelný kód.
+
+### 4.3 Důkladná serverová validace a sanitizace
+Aplikace se nikdy nespoléhá pouze na klientskou validaci v prohlížeči (např. HTML5 atribut `required`), kterou lze snadno obejít vypnutím JavaScriptu nebo přímým odesláním HTTP požadavku přes nástroje jako cURL či Postman. Každý odeslaný formulář prochází robustním validačním cyklem na straně PHP backendu:
+- Ořezání bílých znaků funkcí `trim()`.
+- Validace formátu e-mailové adresy pomocí interního filtru `filter_var($email, FILTER_VALIDATE_EMAIL)`.
+- Kontrola formátu telefonního čísla regulárním výrazem `preg_match('/^[0-9+\s]{9,15}$/', $telefon)`.
+- Validace logického rozsahu kalendářních dat (hráč se nesmí narodit v budoucnosti).
+
+---
+
+## 5. Frontendové technologie a responzivní webdesign
+
+Uživatelské rozhraní aplikace je postaveno na čistých webových standardech bez nutnosti závislosti na těžkopádných externích frameworcích (jako je Bootstrap či Tailwind), což zajišťuje bleskové načítání a stoprocentní kontrolu nad zdrojovým kódem.
+
+### 5.1 Sémantika HTML5
+Struktura stránek využívá moderní sémantické značky:
+- `<header>` pro hlavičku s logem klubu a hlavní navigací.
+- `<main>` pro stěžejní obsahovou část stránky.
+- `<nav>` pro navigační bloky.
+- `<footer>` pro patičku s identifikačními údaji.
+- Správné tabulkové elementy (`<table>`, `<thead>`, `<tbody>`, `<th>`, `<td>`) garantují přístupnost pro čtečky obrazovky a optimální strojové zpracování.
