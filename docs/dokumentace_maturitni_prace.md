@@ -203,3 +203,35 @@ Struktura stránek využívá moderní sémantické značky:
 - `<nav>` pro navigační bloky.
 - `<footer>` pro patičku s identifikačními údaji.
 - Správné tabulkové elementy (`<table>`, `<thead>`, `<tbody>`, `<th>`, `<td>`) garantují přístupnost pro čtečky obrazovky a optimální strojové zpracování.
+
+### 5.2 CSS3 architektura a responzivita
+Stylopis [style.css](file:///d:/XAAMP/htdocs/fotbalovy-klub/css/style.css) implementuje moderní typografii, vizuální hierarchii a komponentový přístup:
+- **CSS Grid:** Použit pro detailní kartu hráče a statistické dashboardy, kde umožňuje přesné dvousměrné rozvržení prvků.
+- **CSS Flexbox:** Využit pro navigační menu, filtrovací lišty a inline formuláře pro zadávání skóre.
+- **Responzivní design (Media Queries):** Pomocí pravidla `@media (max-width: 768px)` se layout na displejích mobilních telefonů automaticky přeuspořádává do jednoho přehledného sloupce, tabulky zmenšují své vnitřní odsazení a ovládací prvky se přizpůsobují dotykovému ovládání.
+
+---
+
+## 6. Verzovací systém Git a vývojové prostředí
+
+Správa zdrojových kódů projektu probíhá v distribuovaném verzovacím systému **Git**.
+- **Historie commitů:** Projekt obsahuje průběžnou historii commitů rozložených v čase, které dokumentují jednotlivé kroky vývoje aplikace od návrhu přes tvorbu databáze, implementaci stránek a formuláře až po dokumentaci.
+- **Vzdálený repozitář (GitHub):** Projekt je publikován pod účtem `Tadeas07` na GitHubu v repozitáři `fotbalovy-klub`, s uděleným přístupem pro vedoucího práce (`mslavik-spselit`).
+- **Vývojový stack:** Aplikace byla vyvinuta a otestována v prostředí **XAMPP** s Apache 2.4, PHP 8.5 a MySQL 8/MariaDB pod operačním systémem Windows, přičemž kód splňuje standardy přenositelnosti na jakýkoliv standardní LAMP/LEMP server.
+
+---
+
+## 7. Seznam použité odborné literatury a zdrojů
+
+1. **Knihy a publikace:**
+   - ČERNÝ, Jiří. *PHP 8: Kompletní průvodce moderním vývojem webových aplikací*. Praha: Grada Publishing, 2022. ISBN 978-80-271-3312-5.
+   - LACKO, Ľuboslav. *MySQL: Tvorba a správa relačních databází*. Brno: Computer Press, 2020. ISBN 978-80-251-4987-1.
+   - DUCKETT, Jon. *HTML a CSS: Návrh a tvorba webových stránek*. Brno: Computer Press, 2017. ISBN 978-80-251-4820-1.
+2. **Normy a technické specifikace:**
+   - W3C. *HTML5: A vocabulary and associated APIs for HTML and XHTML*. W3C Recommendation, 2021. Dostupné z: https://www.w3.org/TR/html5/
+   - OWASP Foundation. *OWASP Top 10: The Ten Most Critical Web Application Security Risks*. 2021. Dostupné z: https://owasp.org/Top10/
+   - Fotbalová asociace České republiky (FAČR). *Soutěžní řád a pravidla mládežnického fotbalu v ČR*. Praha: FAČR, 2025.
+3. **Oficiální dokumentace:**
+   - PHP Group. *PHP Manual: PHP Data Objects (PDO)*. Dostupné z: https://www.php.net/manual/en/book.pdo.php
+   - Oracle Corporation. *MySQL 8.0 Reference Manual: InnoDB Storage Engine*. Dostupné z: https://dev.mysql.com/doc/refman/8.0/en/innodb-storage-engine.html
+   - Git Project. *Pro Git Book by Scott Chacon and Ben Straub*. Dostupné z: https://git-scm.com/book/en/v2
